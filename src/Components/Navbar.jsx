@@ -26,7 +26,7 @@ const Navbar = () => {
         className="max-sm:sticky top-0 z-40 mx-auto flex max-sm:backdrop-blur-sm max-sm:posit  items-center justify-between p-6 lg:px-20 h-24"
       >
         <div className="flex lg:flex-1">
-          <Link to="/home" className="ml-10 p-1.5">
+          <Link to="/" className="ml-10 p-1.5">
             <img alt="" src={assets.logo} className="h-8 w-auto" />
           </Link>
         </div>

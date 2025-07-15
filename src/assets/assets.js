@@ -8,7 +8,6 @@ import Mike_1 from "./Mike1.png";
 import Mike_2 from "./Mike2.png";
 import Mike_3 from "./Mike3.png";
 
-import next from "./next-icon.png";
 import logo from "./logo.png";
 import menu_icon from "./menu-icon.png";
 import icon_1 from "./Camera.png";
@@ -49,7 +48,7 @@ import Support from "./Support.png";
 import Apple from "./Apple.png";
 import Google from "./Google.png";
 import Facebook from "./Facebook.png";
-import info from "./info.png";
+import info from "./Info.png";
 import Estimate from "./Estimate.png";
 import Mortgage from "./Mortgage.png";
 import Bagde_1 from "./badge-1.png";

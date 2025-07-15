@@ -22,6 +22,7 @@ import Verification from "./Pages/Verification";
 import MyApplication from "./Pages/MyApplication";
 import ClientArea from "./Pages/ClientArea";
 import ProtectedRoute from "./Components/ProtectedRoutes";
+
 const AppContent = () => {
   const location = useLocation();
   const hideFooterRoutes = ["/login", "/signup"];
@@ -99,7 +100,6 @@ const AppContent = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      {" "}
       <AppContent />
     </BrowserRouter>
   );
