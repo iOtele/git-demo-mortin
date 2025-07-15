@@ -25,7 +25,7 @@ const ContactForm = () => {
   };
 
   const ContactDetail = ({ icon, title, details }) => (
-    <div className="flex flex-col items-center text-center border-r last:border-r-0 pr-6">
+    <div className="flex flex-col items-center text-center sm:border-r last:border-r-0 pr-6">
       <img className="w-20 mb-2" src={icon} alt="" />
       <span className="text-sm font-semibold">{title}</span>
       {details.map((detail, index) => (
@@ -40,7 +40,7 @@ const ContactForm = () => {
     <>
       <div className="flex flex-col items-center bg-contain bg-center p-12 text-black bg-faded-secondary bg-[url(assets/contactbg.png)] min-h-[60vh]">
         <h1 className="text-4xl font-semibold mb-12">Contact us</h1>
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 gap-y-10 flex-col sm:flex-row ">
           <ContactDetail
             icon={assets.Address}
             title="ADDRESS"

@@ -63,7 +63,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-center justify-center h-[100vh] text-white bg-cover bg-center bg-[url(assets/image-12.png)]">
+        <div className="relative flex flex-col items-center justify-center h-screen text-white bg-cover bg-center bg-[url(assets/image-12.png)]">
           <div className="absolute top-sm:[40%] sm:left-[10%] sm:w-[31%]  bottom-[30%]  px-5 ">
             <h1 className="text-3xl font-medium">Our Values</h1>
             <p className="text-xl md:text-2xl mt-2 font-light">

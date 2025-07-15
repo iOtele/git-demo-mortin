@@ -45,7 +45,7 @@ const Calculator = () => {
      bg-cover bg-center sm:bg-left  w-full bg-[url('assets/loanbg.png')]
    "
     >
-      <div className="container mx-auto mt-10  w-full flex flex-col gap-4  lg:gap-4 pb-24 pt-8  transition-all  justify-between  duration-200 px-[8%] md:px-[5%]  xl:px-[10%] py-4 ">
+      <div className="container mx-auto  w-full flex flex-col gap-4  lg:gap-4 pb-24 pt-8  transition-all  justify-between  duration-200 px-[8%] md:px-[5%]  xl:px-[10%] py-4 ">
         <h1
           className=" font-normal text-center sm:text-left  mt-10 
           

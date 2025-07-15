@@ -13,7 +13,7 @@ const State = () => {
     <div className="container mx-auto mt-20 py-8 flex flex-col transition-all duration-200 px-[8%] md:px-[10%]">
       <div className="flex justify-between items-center mb-6">
         <Title title="Search by State" />
-        <div className="flex justify-center items-center rounded-full border border-secondary-color cursor-pointer h-16 w-16 hover:bg-yellow-100">
+        <div className="flex justify-center items-center rounded-full border border-secondary-color cursor-pointer h-12 w-12 sm:h-14 sm:w-14  hover:bg-yellow-100">
           <img src={assets.next} alt="Next" />
         </div>
         {/* <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
