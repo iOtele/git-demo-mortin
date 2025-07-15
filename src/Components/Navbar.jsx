@@ -112,7 +112,7 @@ const Navbar = () => {
                 Loan Calculator
               </Link>{" "}
               <Link
-                to="/loancalculator"
+                to="/profile"
                 className="text-sm/6 px-2 font-semibold text-gray-900  hover:text-gray-400"
               >
                 Raymond <i className=""></i> <img src={assets.profile} alt="" />
@@ -141,30 +141,35 @@ const Navbar = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Link
+                  onClick={() => setMobileMenuOpen(false)}
                   to="/Home"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                 >
                   Home
                 </Link>
                 <Link
+                  onClick={() => setMobileMenuOpen(false)}
                   to="/Listing"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover hover:text-gray-900 text-gray-50"
                 >
                   Listings
                 </Link>
                 <Link
+                  onClick={() => setMobileMenuOpen(false)}
                   to="/About"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                 >
                   About us
                 </Link>
                 <Link
+                  onClick={() => setMobileMenuOpen(false)}
                   to="Calculator"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                 >
                   Loan Calculator
                 </Link>
                 <Link
+                  onClick={() => setMobileMenuOpen(false)}
                   to="/Contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                 >
@@ -172,6 +177,7 @@ const Navbar = () => {
                 </Link>
 
                 <button
+                  onClick={() => setMobileMenuOpen(false)}
                   type="button"
                   className=" rounded  p-1 text-black-500 font-bold hover:text-secondary-color focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden py-2 px-4 
                   bg-white"
