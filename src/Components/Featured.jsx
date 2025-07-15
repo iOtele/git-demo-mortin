@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import Title from "./Title";
-import { assets } from "../assets/assets";
 
 import Items from "./Items";
+import { assets } from "../assets/assets";
 
 const Featured = () => {
   const { products, loadingProducts } = useContext(StoreContext);

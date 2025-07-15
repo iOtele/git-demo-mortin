@@ -2,7 +2,9 @@ import React, { useContext } from "react";
 import { StoreContext } from "../../Context/StoreContext";
 import Title from "../../Components/Title";
 import StateCard from "./StateCard";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { assets } from "../../assets/assets";
+
+// import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const State = () => {
   const { states, loadingStates, State_list } = useContext(StoreContext);
@@ -11,9 +13,12 @@ const State = () => {
     <div className="container mx-auto mt-20 py-8 flex flex-col transition-all duration-200 px-[8%] md:px-[10%]">
       <div className="flex justify-between items-center mb-6">
         <Title title="Search by State" />
-        <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
+        <div className="flex justify-center items-center rounded-full border border-secondary-color cursor-pointer h-16 w-16 hover:bg-yellow-100">
+          <img src={assets.next} alt="Next" />
+        </div>
+        {/* <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
           <ChevronRightIcon className="w-6 h-6 text-black" />
-        </button>
+        </button> */}
       </div>
 
       <div className="grid grid-cols-1 sm: md:grid-cols-1 lg:grid-cols-3 gap-6 ">
@@ -41,40 +46,3 @@ const State = () => {
 };
 
 export default State;
-
-// import React, { useContext } from "react";
-// import { StoreContext } from "../../Context/StoreContext";
-// import Title from "../../Components/Title";
-// import StateCard from "./StateCard";
-// import { ChevronRightIcon } from "@heroicons/react/24/solid";
-
-// const State = () => {
-//   const { State_list } = useContext(StoreContext);
-
-//   return (
-//     <div className="container mx-auto mt-20 py-8 flex flex-col transition-all duration-200 px-[8%] md:px-[10%]">
-//       <div className="flex justify-between items-center mb-6">
-//         <Title title="Search by State" />
-//         <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
-//           <ChevronRightIcon className="w-6 h-6 text-black" />
-//         </button>
-//       </div>
-
-//       <div className="grid grid-cols-1 sm: md:grid-cols-1 lg:grid-cols-3 gap-6 text-center">
-//         {State_list.map((state, index) => (
-//           <StateCard
-//             key={state.id}
-//             id={index}
-//             title={state.title}
-//             description={state.description}
-//             location={state.location}
-//             image={state.image}
-//             type={state.type_name}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default State;

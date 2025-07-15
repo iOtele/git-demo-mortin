@@ -8,6 +8,7 @@ import Mike_1 from "./Mike1.png";
 import Mike_2 from "./Mike2.png";
 import Mike_3 from "./Mike3.png";
 
+import next from "./next-Icon.png";
 import logo from "./logo.png";
 import menu_icon from "./menu-icon.png";
 import icon_1 from "./Camera.png";

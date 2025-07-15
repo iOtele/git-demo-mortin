@@ -3,7 +3,7 @@ import image_8 from "../assets/image-8.png";
 import image_9 from "../assets/image-9.png";
 import image_10 from "../assets/image-10.png";
 import image_11 from "../assets/image-11.png";
-import next from "../assets/next-icon.png";
+import { assets } from "../assets/assets";
 
 const Section = () => {
   return (
@@ -56,7 +56,7 @@ const Section = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
         </p>
         <div className="mt-0">
-          <img className="w-6" src={next} alt="Next" />
+          <img className="w-6" src={assets.next} alt="Next" />
         </div>
       </div>
     </div>
