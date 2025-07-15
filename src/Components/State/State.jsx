@@ -1,0 +1,80 @@
+import React, { useContext } from "react";
+import { StoreContext } from "../../Context/StoreContext";
+import Title from "../../Components/Title";
+import StateCard from "./StateCard";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
+
+const State = () => {
+  const { states, loadingStates, State_list } = useContext(StoreContext);
+
+  return (
+    <div className="container mx-auto mt-20 py-8 flex flex-col transition-all duration-200 px-[8%] md:px-[10%]">
+      <div className="flex justify-between items-center mb-6">
+        <Title title="Search by State" />
+        <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
+          <ChevronRightIcon className="w-6 h-6 text-black" />
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 sm: md:grid-cols-1 lg:grid-cols-3 gap-6 ">
+        {loadingStates ? (
+          <div className="col-span-3 text-center">Loading...</div>
+        ) : (
+          State_list.map((state, index) => {
+            const matchedState = states.find((s) => s.id === state.id);
+            return (
+              <StateCard
+                key={state.id}
+                id={index}
+                title={matchedState ? matchedState.name : ""}
+                description={state.description}
+                location={state.location}
+                image={state.image}
+                type={state.type_name}
+              />
+            );
+          })
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default State;
+
+// import React, { useContext } from "react";
+// import { StoreContext } from "../../Context/StoreContext";
+// import Title from "../../Components/Title";
+// import StateCard from "./StateCard";
+// import { ChevronRightIcon } from "@heroicons/react/24/solid";
+
+// const State = () => {
+//   const { State_list } = useContext(StoreContext);
+
+//   return (
+//     <div className="container mx-auto mt-20 py-8 flex flex-col transition-all duration-200 px-[8%] md:px-[10%]">
+//       <div className="flex justify-between items-center mb-6">
+//         <Title title="Search by State" />
+//         <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
+//           <ChevronRightIcon className="w-6 h-6 text-black" />
+//         </button>
+//       </div>
+
+//       <div className="grid grid-cols-1 sm: md:grid-cols-1 lg:grid-cols-3 gap-6 text-center">
+//         {State_list.map((state, index) => (
+//           <StateCard
+//             key={state.id}
+//             id={index}
+//             title={state.title}
+//             description={state.description}
+//             location={state.location}
+//             image={state.image}
+//             type={state.type_name}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default State;
