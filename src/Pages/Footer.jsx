@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer
       className="bg-faded-secondary flex flex-col   p-8
-   mx-auto py-14 px-[8%] sm:px-[12%] font-Poppins   bg-cover bg-right  w-full  "
+   mx-auto py-14 px-[2%] sm:px-[12%] font-Poppins   bg-cover bg-right  w-full  "
     >
       <div className="container mx-auto flex flex-wrap justify-between px-6">
         <div className="w-full md:w-1/5 mb-6 md:mb-0">
@@ -113,8 +113,7 @@ const Footer = () => {
         <p>
           <a href="/privacy" className="hover:text-yellow-400">
             Privacy Policy
-          </a>
-      { " "}
+          </a>{" "}
           <a href="/terms" className="hover:text-yellow-400">
             Terms of Service
           </a>
