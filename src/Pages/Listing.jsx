@@ -7,7 +7,7 @@ import Special from "../Components/Special";
 const Listing = () => {
   return (
     <>
-      <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url('assets/bg-Listing.png')] ">
+      <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url(assets/bg-Listing.png)] ">
         <div class="absolute inset-0 bg-blue-950 bg-opacity-50"></div>
         <h1 className="text-4xl md:text-5xl text-white font-bold mb-6 sm:z-20 ">
           Let’s help you find your new home

@@ -11,8 +11,8 @@ import logo from "../assets/logo.png";
 const Footer = () => {
   return (
     <footer
-      className="bg-faded-secondary flex flex-col   p-8
-   mx-auto py-14 px-[2%] sm:px-[12%] font-Poppins   bg-cover bg-right  w-full  "
+      className="bg-faded-secondary flex flex-col p-8
+   mx-auto py-14 px-[2%] sm:px-[13%] font-Poppins   bg-cover bg-right  w-full  "
     >
       <div className="container mx-auto flex flex-wrap justify-between px-6">
         <div className="w-full md:w-1/5 mb-6 md:mb-0">

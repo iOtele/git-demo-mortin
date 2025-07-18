@@ -7,7 +7,7 @@ const About = () => {
     <>
       <div className="flex flex-col">
         <div className="relative flex flex-col w-full h-[90svh] bg-cover bg-center text-white bg-[url(assets/bg-about.png)]">
-          <div className="absolute bottom-[10%] md:top-[28%] md:right-[8%]  md:w-[35%] px-5  ">
+          <div className="absolute bottom-[10%] md:top-[28%] md:right-[8%] md:w-[35%] px-5  ">
             <h1 className="font-poppins text-3xl md:text-5xl text-left sm:font-medium">
               We Grant Wishes
             </h1>
