@@ -21,7 +21,7 @@ const Listing = () => {
           <img
             className="absolute right-5 top-4 w-6 h-6 cursor-pointer"
             src={assets.Search}
-            alt="Search"
+            alt="Search" 
           />
         </div>
       </div>
