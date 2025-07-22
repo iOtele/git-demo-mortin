@@ -8,24 +8,28 @@ const VerifySuccess = () => {
   const [status, setStatus] = useState("pending");
   const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    const doVerify = async () => {
-      try {
-        const result = await verifyUser(user, token);
-        setStatus("success");
-        setMessage(
-          result.message || "Your account has been verified successfully."
-        );
-      } catch (error) {
-        setStatus("error");
-        setMessage(
-          error.message ||
-            "Verification failed. Please try again or contact support."
-        );
-      }
-    };
-    doVerify();
-  }, [user, token, verifyUser]);
+  useEffect(
+    () => {
+      const doVerify = async () => {
+        try {
+          const result = await verifyUser(user, token);
+          setStatus("success");
+          setMessage(
+            result.message || "Your account has been verified successfully."
+          );
+        } catch (error) {
+          setStatus("error");
+          setMessage(
+            error.message ||
+              "Verification failed. Please try again or contact support."
+          );
+        }
+      };
+      doVerify();
+    },
+    [user, token]
+    // [uid, token, verifyUser]
+  );
 
   return (
     <div className="py-20 bg-gray-50 flex items-center justify-center p-4 border border-gray-200">
@@ -107,7 +111,7 @@ const VerifySuccess = () => {
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
           {status === "pending" ? "Verifying your account..." : message}
         </p>
-        <Link to="/login">
+        <Link to="/verification">
           <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-6 rounded-lg transition-colors duration-200">
             Continue
           </button>

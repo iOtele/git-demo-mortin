@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useCallback } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import {
   sponsor_list,
@@ -15,10 +15,8 @@ const API_BASE_URL = "https://preprod.mortin.co/api/ui";
 const StoreContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [loadingProducts, setLoadingProducts] = useState(true);
-
   const [states, setStates] = useState([]);
   const [loadingStates, setLoadingStates] = useState(true);
-
   // Authentication state
   const [currentUser, setCurrentUser] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
@@ -106,13 +104,11 @@ const StoreContextProvider = ({ children }) => {
             response.data.message || "Please check your email for verification",
         };
       } else if (response.data && response.data.message) {
-        // If backend returns a message (like "Email verification pending")
         throw new Error(response.data.message);
       } else {
         throw new Error(response.data.message || "Registration failed");
       }
     } catch (err) {
-      // Pass backend message up if available
       const message =
         err.response?.data?.message ||
         err.message ||
@@ -122,54 +118,13 @@ const StoreContextProvider = ({ children }) => {
     }
   };
 
-  const login = async (email, password) => {
-    try {
-      setAuthError(null);
-      const response = await api.post("/authenticate/user", {
-        email,
-        password,
-      });
-
-      if (response.data && response.data.token) {
-        const { token, user } = response.data;
-
-        // Store token and user
-        localStorage.setItem("token", token);
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Update axios instance with new token
-        api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-
-        setCurrentUser(user);
-        return user;
-      } else {
-        throw new Error(response.data?.message || "Authentication failed");
-      }
-    } catch (err) {
-      const message =
-        err.response?.data?.message || "Invalid credentials. Please try again.";
-      setAuthError(message);
-      throw new Error(message);
-    }
-  };
-
-  // Logout function
-  const logout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    // Revert to public token
-    api.defaults.headers.common["Authorization"] =
-      "Bearer PRE-PRODUCTION-AUTH-KEY";
-    setCurrentUser(null);
-    setAuthError(null);
-  };
   // Verify user function
   const verifyUser = async (user, token) => {
     try {
       setAuthError(null);
-      console.log(user, "and token:", token);
-      const response = await api.post("/verify/user", { user, token });
+      const response = await api.get(`/verify/user/email/${user}/${token}`);
 
+      console.log("Verification response:", response.data);
       if (response.data && response.data.message) {
         return response.data;
       } else {
@@ -184,6 +139,49 @@ const StoreContextProvider = ({ children }) => {
       throw new Error(message);
     }
   };
+
+  const login = async (email, password) => {
+    try {
+      setAuthError(null);
+      const response = await api.post("/authenticate/user", {
+        email,
+        password,
+      });
+      console.log(response.data);
+      if (response.data && response.data.token) {
+        const { user, token } = response.data;
+
+        // Store token and user
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Update axios instance with new token
+        api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+        setCurrentUser(user);
+        return user;
+      } else {
+        throw new Error(response.data?.message || "Authentication failed");
+      }
+    } catch (err) {
+      console.log(err);
+      const message =
+        err.response?.data?.message || "Invalid credentials. Please try again.";
+      setAuthError(message);
+      throw new Error(message);
+    }
+  };
+
+  // Logout function
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    api.defaults.headers.common["Authorization"] =
+      "Bearer PRE-PRODUCTION-AUTH-KEY";
+    setCurrentUser(null);
+    setAuthError(null);
+  };
+
   // Forgot password function
   const forgotPassword = async (email) => {
     try {

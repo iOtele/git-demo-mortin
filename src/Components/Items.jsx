@@ -40,9 +40,11 @@ const Items = ({ item }) => {
           <p className="text-lg">
             N {parseInt(item.cost, 10).toLocaleString("en-NG")}
           </p>
-          <button className="bg-secondary-color text-black font-bold text-sm px-4 py-1 rounded">
-            Apply
-          </button>
+          <Link to={`/product/${item.uid}`}>
+            <button className="bg-secondary-color text-black font-bold text-sm px-4 py-1 rounded">
+              Apply
+            </button>
+          </Link>
         </div>
         <div className="flex justify-between items-center w-full mt-2">
           <div className="flex gap-2">

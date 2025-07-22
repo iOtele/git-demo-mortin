@@ -35,6 +35,7 @@ const AuthForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (activeTab === "login") {
       try {
         console.log({ email, password });
@@ -142,7 +143,7 @@ const AuthForm = () => {
                       }
                     >
                       {rule.label}
-                    </span>{" "}
+                    </span>
                     <span
                       className={
                         passed
@@ -173,7 +174,9 @@ const AuthForm = () => {
             !password ||
             (activeTab === "sign-up" &&
               (!validatePassword(password) || password !== confirmPassword)) ||
-            (activeTab === "login" && (!email || !validatePassword(password)))
+            (activeTab === "login" &&
+              (!email || !validatePassword(password))) ||
+            loading
           }
           type="submit"
           className={`w-full py-2 bg-yellow-400 text-black font-semibold rounded-md ${

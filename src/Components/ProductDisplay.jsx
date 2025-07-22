@@ -1,14 +1,17 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const ProductDisplay = ({ item }) => {
   return (
     <div className="container mx-auto px-4 md:px-12 lg:px-24">
       <div className="flex justify-between items-center py-4">
-        <div className="flex items-center gap-2">
-          <img src={assets.BackIcon} alt="Back" className="w-5" />
-          <span className="text-lg font-semibold">Back</span>
-        </div>
+        <Link to="/listing">
+          <div className="flex items-center gap-2">
+            <img src={assets.BackIcon} alt="Back" className="w-5" />
+            <span className="text-lg font-semibold">Back</span>
+          </div>
+        </Link>
         <div className="flex gap-4">
           <button className="border-2 border-yellow-400 text-yellow-500 px-4 py-2 rounded-md">
             Contact Manager
