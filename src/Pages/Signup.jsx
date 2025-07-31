@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { assets } from "../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
+import { useNavigate } from "react-router-dom";
 
 const rules = [
   {
@@ -32,13 +33,15 @@ const AuthForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const { signup, login } = useContext(StoreContext);
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (activeTab === "login") {
       try {
-        console.log({ email, password });
         await login(email, password);
         alert("Login successful!");
+        navigate("/verification");
       } catch (error) {
         alert(
           error.response?.data?.message ||

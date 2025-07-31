@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import Navbar from "./Components/Navbar";
 import SubmitComplete from "./Components/SubmitComplete";
 import ApplicationSubmitted from "./Components/ApplicationSubmitted";
-import ApiSample from "./Components/ApiSample";
 import Footer from "./Pages/Footer";
 import Home from "./Pages/Home";
 import Listing from "./Pages/Listing";
@@ -33,7 +33,7 @@ const AppContent = () => {
 
   return (
     <>
-      <Navbar />
+      {!shouldHideFooter && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/listing" element={<Listing />} />
@@ -84,10 +84,8 @@ const AppContent = () => {
             </ProtectedRoute>
           }
         />
-        <Route path="/footer" element={<Footer />} />
         <Route path="/submitcomplete" element={<SubmitComplete />} />
         <Route path="/creditscore" element={<CreditScore />} />
-        <Route path="/apisample" element={<ApiSample />} />
         <Route
           path="/applicationsubmit"
           element={<ApplicationSubmitted />}
@@ -99,9 +97,12 @@ const AppContent = () => {
 };
 const App = () => {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </>
   );
 };
 export default App;

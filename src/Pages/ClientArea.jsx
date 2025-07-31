@@ -5,6 +5,7 @@ import State from "../Components/State/State";
 import Special from "../Components/Special";
 import LoanCalculator from "../Components/LoanCalculator";
 import Recommended from "../Components/Recommended";
+import { Link } from "react-router-dom";
 
 const ClientArea = () => {
   return (
@@ -16,9 +17,11 @@ const ClientArea = () => {
             You are a few steps away from completely setting up your Mortin
             account
           </p>
-          <button className="bg-white px-4 py-2 rounded-md">
-            Start Verification
-          </button>
+          <Link to="/verification">
+            <button className="bg-white px-4 py-2 rounded-md">
+              Start Verification
+            </button>
+          </Link>
         </div>
       </div>
       <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url('assets/bg-Listing.png')]">

@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { assets } from "../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const rules = [
   {
@@ -32,15 +34,17 @@ const AuthForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const { signup, login } = useContext(StoreContext);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     if (activeTab === "login") {
       try {
-        console.log({ email, password });
         await login(email, password);
-        alert("Login successful!");
+        // alert("Login successful!");
+        toast.success("Logged in successfully.");
+        navigate("/clientarea");
       } catch (error) {
         alert(
           error.response?.data?.message ||
@@ -62,7 +66,6 @@ const AuthForm = () => {
         return;
       }
       try {
-        console.log({ email, password, confirm_password: confirmPassword });
         await signup({ email, password, confirm_password: confirmPassword });
         alert("Signup successful! Please log in.");
         setActiveTab("login");
@@ -174,8 +177,8 @@ const AuthForm = () => {
             !password ||
             (activeTab === "sign-up" &&
               (!validatePassword(password) || password !== confirmPassword)) ||
-            (activeTab === "login" &&
-              (!email || !validatePassword(password))) ||
+            (activeTab === "login" && !email) ||
+            // || !validatePassword(password)
             loading
           }
           type="submit"
@@ -184,8 +187,9 @@ const AuthForm = () => {
             !password ||
             (activeTab === "sign-up" &&
               (!validatePassword(password) || password !== confirmPassword)) ||
-            (activeTab === "login" && (!email || !validatePassword(password)))
-              ? "opacity-50 cursor-not-allowed"
+            (activeTab === "login" && !email)
+              ? // ||!validatePassword(password)
+                "opacity-50 cursor-not-allowed"
               : ""
           }`}
         >

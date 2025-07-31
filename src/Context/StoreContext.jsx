@@ -78,7 +78,6 @@ const StoreContextProvider = ({ children }) => {
   useEffect(() => {
     const fetchStates = async () => {
       try {
-        console.log("Fetching states...", states);
         const response = await api.get("/states");
         setStates(response.data?.states || []);
       } catch (error) {
@@ -100,8 +99,8 @@ const StoreContextProvider = ({ children }) => {
       if (response.data && response.data.user) {
         return {
           user: true,
-          message:
-            response.data.message || "Please check your email for verification",
+          status:
+            response.data.status || "Please check your email for verification",
         };
       } else if (response.data && response.data.message) {
         throw new Error(response.data.message);
@@ -125,7 +124,7 @@ const StoreContextProvider = ({ children }) => {
       const response = await api.get(`/verify/user/email/${user}/${token}`);
 
       console.log("Verification response:", response.data);
-      if (response.data && response.data.message) {
+      if (response.data && response.data.status == "success") {
         return response.data;
       } else {
         throw new Error("Verification failed");
@@ -140,6 +139,8 @@ const StoreContextProvider = ({ children }) => {
     }
   };
 
+  // Login user function
+
   const login = async (email, password) => {
     try {
       setAuthError(null);
@@ -147,26 +148,23 @@ const StoreContextProvider = ({ children }) => {
         email,
         password,
       });
-      console.log(response.data);
-      if (response.data && response.data.token) {
-        const { user, token } = response.data;
 
-        // Store token and user
-        localStorage.setItem("token", token);
+      console.log("Login API response:", response.data);
+
+      if (response.data.status === "success" && response.data.user?.uid) {
+        const { user } = response.data;
+        const { uid } = user;
+        localStorage.setItem("token", uid);
         localStorage.setItem("user", JSON.stringify(user));
-
-        // Update axios instance with new token
-        api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-
+        api.defaults.headers.common["Authorization"] = `Bearer ${uid}`;
         setCurrentUser(user);
         return user;
       } else {
-        throw new Error(response.data?.message || "Authentication failed");
+        throw new Error("Invalid login response");
       }
     } catch (err) {
-      console.log(err);
-      const message =
-        err.response?.data?.message || "Invalid credentials. Please try again.";
+      console.error("Login error:", err.response?.data || err.message);
+      const message = err.response?.data?.message || "Login failed. Try again.";
       setAuthError(message);
       throw new Error(message);
     }
@@ -179,7 +177,9 @@ const StoreContextProvider = ({ children }) => {
     api.defaults.headers.common["Authorization"] =
       "Bearer PRE-PRODUCTION-AUTH-KEY";
     setCurrentUser(null);
+    toast.success("Logged out successfully.");
     setAuthError(null);
+   
   };
 
   // Forgot password function
@@ -227,25 +227,6 @@ const StoreContextProvider = ({ children }) => {
     }
   };
 
-  // Get user by phone number
-  const getUserByPhone = async (phoneNumber) => {
-    try {
-      setAuthError(null);
-      const response = await api.get(`/user/${phoneNumber}`);
-
-      if (response.data) {
-        return response.data;
-      } else {
-        throw new Error("User not found");
-      }
-    } catch (err) {
-      setAuthError(
-        err.response?.data?.message || "Failed to fetch user information."
-      );
-      throw err;
-    }
-  };
-
   // Update user profile
   const updateUserProfile = async (userId, userData) => {
     try {
@@ -272,7 +253,6 @@ const StoreContextProvider = ({ children }) => {
 
   // Context value
   const contextValue = {
-    // Product data
     sponsor_list,
     house_list,
     allproperty_list,
@@ -293,7 +273,6 @@ const StoreContextProvider = ({ children }) => {
     forgotPassword,
     resetPassword,
     logout,
-    getUserByPhone,
     updateUserProfile,
     verifyUser,
     api,

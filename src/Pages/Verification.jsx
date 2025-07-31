@@ -96,7 +96,7 @@ const MultiStepForm = () => {
     // Personal Info
     firstName: "",
     lastName: "",
-    email: "lek@gmail.com",
+    email: "",
     phone: "",
     dob: "",
     gender: "",
@@ -110,7 +110,7 @@ const MultiStepForm = () => {
     sector: "",
     salary: "",
     role: "",
-    companyEmail: "lek@gmail.com",
+    companyEmail: "",
     state: "",
     lga: "",
     companyName: "",
@@ -121,7 +121,7 @@ const MultiStepForm = () => {
     // Guarantor Info
     guarantorFirstName: "",
     guarantorLastName: "",
-    guarantorEmail: "lek@gmail.com",
+    guarantorEmail: "",
     guarantorPhone: "",
     guarantorDOB: "",
     guarantorGender: "",
