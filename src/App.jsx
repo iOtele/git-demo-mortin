@@ -22,11 +22,22 @@ import Verification from "./Pages/Verification";
 import MyApplication from "./Pages/MyApplication";
 import ClientArea from "./Pages/ClientArea";
 import ProtectedRoute from "./Components/ProtectedRoutes";
+import UpdatePasswordForm from "./Pages/UpdatePasswordForm";
+import ForgotPasswordForm from "./Pages/ForgotPasswordForm";
+import ForgotPasswordSuccess from "./Pages/ForgotPasswordSuccess";
 
 const AppContent = () => {
   const location = useLocation();
-  const hideFooterRoutes = ["/login", "/signup"];
-  const isVerifyRoute = location.pathname.startsWith("/verify/");
+  const hideFooterRoutes = [
+    "/login",
+    "/signup",
+    "/forgot-password",
+    "/forgot-password-success",
+    "/reset-password",
+    "/update-password",
+    "/verify/:user/:token",
+  ];
+  const isVerifyRoute = location.pathname.startsWith("/verify");
 
   const shouldHideFooter =
     hideFooterRoutes.includes(location.pathname) || isVerifyRoute;
@@ -44,6 +55,12 @@ const AppContent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/verify/:user/:token" element={<VerifySuccess />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot-password" element={<ForgotPasswordForm />} />
+        <Route path="/update-password" element={<UpdatePasswordForm />} />
+        <Route
+          path="/forgot-password-success"
+          element={<ForgotPasswordSuccess />}
+        />
         <Route
           path="/clientarea"
           element={
@@ -84,11 +101,29 @@ const AppContent = () => {
             </ProtectedRoute>
           }
         />
-        <Route path="/submitcomplete" element={<SubmitComplete />} />
-        <Route path="/creditscore" element={<CreditScore />} />
+        <Route
+          path="/submitcomplete"
+          element={
+            <ProtectedRoute>
+              <SubmitComplete />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/creditscore"
+          element={
+            <ProtectedRoute>
+              <CreditScore />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/applicationsubmit"
-          element={<ApplicationSubmitted />}
+          element={
+            <ProtectedRoute>
+              <ApplicationSubmitted />
+            </ProtectedRoute>
+          }
         />{" "}
       </Routes>
       {!shouldHideFooter && <Footer />}

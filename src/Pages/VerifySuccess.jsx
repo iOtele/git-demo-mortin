@@ -32,7 +32,7 @@ const VerifySuccess = () => {
   );
 
   return (
-    <div className="py-20 bg-gray-50 flex items-center justify-center p-4 border border-gray-200">
+    <div className="py-20 bg-gray-50 flex items-center justify-center p-4 ">
       <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 max-w-md w-full text-center">
         <h1 className="text-2xl font-bold text-gray-900 mb-8">
           {status === "success"

@@ -1,7 +1,5 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import { Link } from "react-dom";
-import SubmitComplete from "./SubmitComplete";
 
 const DocumentUpload = ({
   formData,

@@ -1,14 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function PasswordResetSuccess() {
+const ForgotPasswordSuccess = () => {
+  const navigate = useNavigate();
+
   const handleContinue = () => {
-    // Handle continue action here
-    console.log("Continue clicked");
+    // Redirect to the change password/reset password page
+    navigate("/login");
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-md text-center">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 ">
+      <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 max-w-md w-full text-center      ">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Successful</h1>
 
         <div className="mb-8">
@@ -40,7 +43,7 @@ export default function PasswordResetSuccess() {
         </div>
 
         <p className="text-gray-600 text-lg mb-12 leading-relaxed">
-          The link to reset your password as been sent to your email address
+          The link to reset your password has been sent to your email address
         </p>
 
         <button
@@ -52,4 +55,5 @@ export default function PasswordResetSuccess() {
       </div>
     </div>
   );
-}
+};
+export default ForgotPasswordSuccess;

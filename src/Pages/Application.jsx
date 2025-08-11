@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function LoanApplicationModal() {
+const LoanApplicationModal = () => {
   const [selectedDuration, setSelectedDuration] = useState("6 Months");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -185,4 +185,5 @@ export default function LoanApplicationModal() {
       </div>
     </div>
   );
-}
+};
+export default LoanApplicationModal;

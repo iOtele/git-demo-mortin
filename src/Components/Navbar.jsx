@@ -13,7 +13,6 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const navigate = useNavigate();
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -29,7 +28,7 @@ const Navbar = () => {
     logout();
     setTimeout(() => {
       navigate("/");
-    }, 1000);
+    }, 100);
   };
   return (
     <>

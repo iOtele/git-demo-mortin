@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import Footer from "./Footer";
+import React, { useState, useContext } from "react";
+import UpdatePasswordForm from "./UpdatePasswordForm";
 import { assets } from "../assets/assets";
 
 const MyProfile = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
@@ -118,7 +120,11 @@ const MyProfile = () => {
                 </label>
               </div>
               <div className="flex justify-between flex-col gap-6 sm:flex-row mt-6">
-                <button className="bg-gray-200 text-gray-600 px-8 py-3 rounded text-sm font-semibold">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-gray-200 text-gray-600 px-8 py-3 rounded text-sm font-semibold cursor-pointer"
+                >
                   Change Password
                 </button>
                 <button
@@ -133,6 +139,10 @@ const MyProfile = () => {
           </div>
         </div>
       </div>
+      <UpdatePasswordForm
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };

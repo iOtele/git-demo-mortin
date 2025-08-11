@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { assets } from "../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const rules = [
@@ -42,7 +42,6 @@ const AuthForm = () => {
     if (activeTab === "login") {
       try {
         await login(email, password);
-        // alert("Login successful!");
         toast.success("Logged in successfully.");
         navigate("/clientarea");
       } catch (error) {
@@ -67,7 +66,7 @@ const AuthForm = () => {
       }
       try {
         await signup({ email, password, confirm_password: confirmPassword });
-        alert("Signup successful! Please log in.");
+        toast.success("Signup successful! Please log in.");
         setActiveTab("login");
       } catch (error) {
         alert(
@@ -141,20 +140,20 @@ const AuthForm = () => {
                     <span
                       className={
                         passed
-                          ? "text-green-700 text-sm"
-                          : "text-gray-600 text-sm"
-                      }
-                    >
-                      {rule.label}
-                    </span>
-                    <span
-                      className={
-                        passed
                           ? "text-green-600 font-bold"
                           : "text-gray-400 font-bold"
                       }
                     >
                       {passed ? "✔️" : "✖️"}
+                    </span>
+                    <span
+                      className={
+                        passed
+                          ? "text-green-700 text-sm"
+                          : "text-gray-600 text-sm"
+                      }
+                    >
+                      {rule.label}
                     </span>
                   </div>
                 );
@@ -195,29 +194,39 @@ const AuthForm = () => {
         >
           {loading ? "Loading..." : activeTab === "login" ? "Login" : "Sign up"}
         </button>
-        <p className="text-sm text-gray-500 mt-2 text-center">
-          By submitting, I accept MortIn's{" "}
-          <a href="/terms" className="text-blue-600">
-            terms of use
-          </a>
-          .
-        </p>
+
+        {activeTab == "sign-up" ? (
+          <p className="text-sm text-gray-500 mt-2 text-center">
+            By submitting, I accept MortIn's{" "}
+            <a href="/terms" className="text-blue-600">
+              terms of use
+            </a>
+            .
+          </p>
+        ) : (
+          <Link to="/forgot-password">
+            {" "}
+            <div className="flex justify-center my-5 text-gray-600 font-medium cursor-pointer">
+              Forgot Password
+            </div>
+          </Link>
+        )}
       </form>
 
       <div className="mt-6 border-t pt-4">
-        <p className="text-lg text-gray-700">Or Connect with:</p>
-        <div className="space-y-2">
-          <button className="flex items-center justify-center w-full p-2 border rounded-md">
-            <img src={assets.Google} alt="Google" className="w-5 mr-2" />{" "}
-            Continue with Google
+        <p className="text-lg text-gray-700 py-2">Or Connect with:</p>
+        <div className="space-y-2 ">
+          <button className="flex justify-center items-center w-full p-2 border rounded-md">
+            <img src={assets.Google} alt="Google" className=" w-5   " />
+            <p className="text-center w-full ">Continue with Google</p>{" "}
           </button>
           <button className="flex items-center justify-center w-full p-2 border rounded-md">
             <img src={assets.Facebook} alt="Facebook" className="w-5 mr-2" />{" "}
-            Continue with Facebook
+            <p className="text-center w-full ">Continue with Facebook</p>
           </button>
           <button className="flex items-center justify-center w-full p-2 border rounded-md">
-            <img src={assets.Apple} alt="Apple" className="w-5 mr-2" /> Continue
-            with Apple
+            <img src={assets.Apple} alt="Apple" className="w-5 mr-2" />
+            <p className="text-center w-full ">Continue with Apple</p>
           </button>
         </div>
       </div>

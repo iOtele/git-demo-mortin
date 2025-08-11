@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PersonalInfo from "../Components/PersonalInfo";
 import EmploymentInfo from "../Components/EmploymentInfo";
 import GuarantorInfo from "../Components/GuarantorInfo";
 import DocumentUpload from "../Components/DocumentUpload";
 import SubmitComplete from "../Components/SubmitComplete";
+import { StoreContext } from "../Context/StoreContext";
 
 const ProgressRing = ({ step, currentStep, label }) => {
   const isCompleted = currentStep > step;
@@ -90,8 +91,11 @@ const ProgressBar = ({ currentStep }) => {
 };
 
 const MultiStepForm = () => {
+  const { submitCompleteForm, submitLoading, authError, currentUser } =
+    useContext(StoreContext);
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState({});
+  const [submitSuccess, setSubmitSuccess] = useState(false);
   const [formData, setFormData] = useState({
     // Personal Info
     firstName: "",
@@ -261,35 +265,90 @@ const MultiStepForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-    if (validateStep(4)) {
-      console.log("Form submitted:", formData);
-      alert("Form submitted successfully!");
+  const handleSubmit = async (e) => {
+    //   // e.preventDefault();
+    //   if (validateStep(4)) {
+    //     console.log("Form submitted:", formData);
+    //     alert("Form submitted successfully!");
+    //   }
+    // };
+
+    e?.preventDefault();
+
+    if (!validateStep(4)) {
+      return;
+    }
+
+    if (!currentUser) {
+      setErrors({ submit: "Please log in to submit the form" });
+      return;
+    }
+
+    try {
+      console.log("Submitting form with data:", formData);
+      const result = await submitCompleteForm(formData);
+
+      if (result.status === "success") {
+        setSubmitSuccess(true);
+        console.log("Form submitted successfully!");
+        setStep(5); // Move to success step
+      }
+    } catch (error) {
+      console.error("Form submission failed:", error);
+      setErrors({ submit: error.message || "Form submission failed" });
     }
   };
+
   const stepHeadings = [
     "Personal Info",
     "Guarantor Information",
     "Employment Information",
     "Document Upload",
   ];
+
   return (
     <>
+    
+      {submitLoading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg">
+            <div className="flex items-center space-x-3">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-yellow-400"></div>
+              <span>Submitting form...</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Error Messages */}
+      {authError && (
+        <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded max-w-3xl mx-auto">
+          {authError}
+        </div>
+      )}
+
+      {errors.submit && (
+        <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded max-w-3xl mx-auto">
+          {errors.submit}
+        </div>
+      )}
+
+      {/* Main Form */}
       {step === 5 ? (
         <div>
           <SubmitComplete setStep={setStep} />
         </div>
       ) : (
-        <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8  ">
+        <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-3xl mx-auto mb-10">
             <h1 className="text-3xl font-normal text-gray-900">
               Identity verification
             </h1>
           </div>
+
           <div className="bg-white shadow-md rounded-lg p-6 sm:p-8 w-full max-w-3xl mx-auto">
             <div className="max-w-4xl mx-auto">
-              <div className=" border-b-2">
+              <div className="border-b-2">
                 <h2 className="text-2xl font-bold text-gray-800 pb-10">
                   {stepHeadings[step - 1]}
                 </h2>
@@ -307,7 +366,7 @@ const MultiStepForm = () => {
                   />
                 )}
 
-                {/* Step 2: Employment Information */}
+                {/* Step 2: Guarantor Information */}
                 {step === 2 && (
                   <GuarantorInfo
                     formData={formData}
@@ -318,7 +377,7 @@ const MultiStepForm = () => {
                   />
                 )}
 
-                {/* Step 3: Guarantor Information */}
+                {/* Step 3: Employment Information */}
                 {step === 3 && (
                   <EmploymentInfo
                     formData={formData}
@@ -347,6 +406,81 @@ const MultiStepForm = () => {
       )}
     </>
   );
+
+  // return (
+  //   <>
+  //     {step === 5 ? (
+  //       <div>
+  //         <SubmitComplete setStep={setStep} />
+  //       </div>
+  //     ) : (
+  //       <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8  ">
+  //         <div className="w-full max-w-3xl mx-auto mb-10">
+  //           <h1 className="text-3xl font-normal text-gray-900">
+  //             Identity verification
+  //           </h1>
+  //         </div>
+  //         <div className="bg-white shadow-md rounded-lg p-6 sm:p-8 w-full max-w-3xl mx-auto">
+  //           <div className="max-w-4xl mx-auto">
+  //             <div className=" border-b-2">
+  //               <h2 className="text-2xl font-bold text-gray-800 pb-10">
+  //                 {stepHeadings[step - 1]}
+  //               </h2>
+  //               <ProgressBar currentStep={step} totalSteps={4} />
+  //             </div>
+
+  //             <div className="bg-white rounded-lg p-6 sm:p-8">
+  //               {/* Step 1: Personal Information */}
+  //               {step === 1 && (
+  //                 <PersonalInfo
+  //                   formData={formData}
+  //                   handleChange={handleChange}
+  //                   errors={errors}
+  //                   nextStep={nextStep}
+  //                 />
+  //               )}
+
+  //               {/* Step 2: Employment Information */}
+  //               {step === 2 && (
+  //                 <GuarantorInfo
+  //                   formData={formData}
+  //                   handleChange={handleChange}
+  //                   errors={errors}
+  //                   nextStep={nextStep}
+  //                   prevStep={prevStep}
+  //                 />
+  //               )}
+
+  //               {/* Step 3: Guarantor Information */}
+  //               {step === 3 && (
+  //                 <EmploymentInfo
+  //                   formData={formData}
+  //                   handleChange={handleChange}
+  //                   errors={errors}
+  //                   nextStep={nextStep}
+  //                   prevStep={prevStep}
+  //                 />
+  //               )}
+
+  //               {/* Step 4: Document Upload */}
+  //               {step === 4 && (
+  //                 <DocumentUpload
+  //                   formData={formData}
+  //                   handleFileChange={handleFileChange}
+  //                   errors={errors}
+  //                   handleSubmit={handleSubmit}
+  //                   prevStep={prevStep}
+  //                   nextStep={nextStep}
+  //                 />
+  //               )}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+
+  //     )}
+  //   </>
+  // );
 };
 
 export default MultiStepForm;
