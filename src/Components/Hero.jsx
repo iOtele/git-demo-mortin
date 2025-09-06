@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 
 const Hero = () => {
   return (
-    <div className=" font-Poppins relative h-[90vh] md:h-[90vh] bg-cover bg-right text-white  w-full  bg-no-repeat bg-gray-600 bg-[url('assets/bg-home.png')]">
+    <div className=" font-Poppins relative h-[90vh] md:h-[90vh] bg-cover bg-right text-white  w-full  bg-no-repeat bg-gray-600 bg-[url('/bg-home.png')]">
       <div className=" absolute sm:right-[8%] sm:top-[25%] items-center justify-between bg-yellow-50 bg-opacity-80 border border-gray-300 rounded-[15px] pl-2 pr-0 w-[110px] sm:min-w-64 h-[30px] text-gray-700 text-sm  md:text-lg font-medium max-lg:hidden flex">
         <p className="text-sm">Super Easy Payment Plans</p>
         <img

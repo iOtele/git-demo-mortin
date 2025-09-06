@@ -24,7 +24,7 @@ const About = () => {
 
         <div
           className="flex h-[80svh] flex-col items-center justify-center  bg-cover bg-center text-black py-12 sm:px-24 px-4
-         bg-[url('assets/bg-getloan.png')]"
+         bg-[url('/bg-getloan.png')]"
         >
           <div className="flex flex-col gap-6 max-w-5xl  ">
             <div className="flex items-start flex-col md:flex-row gap-x-7 md:gap-0">

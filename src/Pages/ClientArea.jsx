@@ -24,7 +24,7 @@ const ClientArea = () => {
           </Link>
         </div>
       </div>
-      <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url('assets/bg-listing.png')]">
+      <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url('/bg-listing.png')]">
         <h1 className="text-4xl md:text-5xl text-white font-bold mb-6">
           Let’s help you find your new home
         </h1>
