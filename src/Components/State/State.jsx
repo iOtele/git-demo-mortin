@@ -4,8 +4,6 @@ import Title from "../../Components/Title";
 import StateCard from "./StateCard";
 import { assets } from "../../assets/assets";
 
-// import { ChevronRightIcon } from "@heroicons/react/24/solid";
-
 const State = () => {
   const { states, loadingStates, State_list } = useContext(StoreContext);
 
@@ -16,9 +14,6 @@ const State = () => {
         <div className="flex justify-center items-center rounded-full border border-secondary-color cursor-pointer h-12 w-12 sm:h-14 sm:w-14  hover:bg-yellow-100">
           <img src={assets.next} alt="Next" />
         </div>
-        {/* <button className="p-5 bg-yellow-400 rounded-full hover:bg-yellow-500 transition">
-          <ChevronRightIcon className="w-6 h-6 text-black" />
-        </button> */}
       </div>
 
       <div className="grid grid-cols-1 sm: md:grid-cols-1 lg:grid-cols-3 gap-6 ">

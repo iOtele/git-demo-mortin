@@ -90,7 +90,7 @@ const StoreContextProvider = ({ children }) => {
     fetchProducts();
 
     return () => {
-      controller.abort(); // cancel request if component unmounts
+      controller.abort();
     };
   }, [currentUser]);
 
@@ -100,7 +100,6 @@ const StoreContextProvider = ({ children }) => {
 
     const fetchStates = async () => {
       try {
-        // Ensure public token for unauthenticated users
         if (!currentUser) {
           api.defaults.headers.common["Authorization"] =
             "Bearer PRE-PRODUCTION-AUTH-KEY";
@@ -300,9 +299,8 @@ const StoreContextProvider = ({ children }) => {
       const payload = {
         first_name: personalData.firstName,
         last_name: personalData.lastName,
-        full_name: `${personalData.firstName} ${personalData.lastName}`,
         email: personalData.email,
-        phone: personalData.phone,
+        phone_no: personalData.phone,
         dob: personalData.dob,
         gender: personalData.gender,
         marital_status: personalData.maritalStatus,
@@ -323,6 +321,7 @@ const StoreContextProvider = ({ children }) => {
       }
     } catch (err) {
       console.error("Personal info submission error:", err);
+      console.log("API error response:", err.response?.data);
       const message =
         err.response?.data?.message || "Failed to submit personal information";
       setAuthError(message);
@@ -340,9 +339,10 @@ const StoreContextProvider = ({ children }) => {
         last_name: guarantorData.guarantorLastName,
         email: guarantorData.guarantorEmail,
         phone_no: guarantorData.guarantorPhone,
+        dob: guarantorData.guarantorDob,
         gender: guarantorData.guarantorGender,
-        address: guarantorData.guarantorAddress,
         relationship: guarantorData.relationship,
+        address: guarantorData.guarantorAddress,
       };
 
       console.log("Submitting guarantor info:", payload);
@@ -364,13 +364,11 @@ const StoreContextProvider = ({ children }) => {
     }
   };
 
-  // Submit Employment Information - FIXED: Dynamic LGA handling
   const submitEmploymentInfo = async (employmentData, uid) => {
     try {
       setAuthError(null);
 
-      // Find the LGA ID from states data if available
-      let lgaId = 1; // Default fallback
+      let lgaId = 1;
 
       if (states && states.length > 0) {
         const selectedState = states.find(
@@ -390,16 +388,17 @@ const StoreContextProvider = ({ children }) => {
       }
 
       const payload = {
-        company_name: employmentData.companyName,
-        company_email: employmentData.companyEmail,
-        company_address: employmentData.companyAddress,
-        sector: employmentData.sector,
-        mngr_name: employmentData.employerName,
-        mngr_phone_no: employmentData.employerPhone,
-        salary: employmentData.salary,
         type: employmentData.employmentType,
+        sector: employmentData.sector,
+        salary: employmentData.salary,
         role: employmentData.role,
-        lga_id: lgaId,
+        company_email: employmentData.companyEmail,
+        state_id: Number(personalData.state_id),
+        lga_id: Number(employmentData.lga_id),
+        company_name: employmentData.companyName,
+        company_address: employmentData.companyAddress,
+        mngr_name: employmentData.employerName,
+        mngr_phone_no: Number(employmentData.employerPhone),
       };
 
       console.log("Submitting employment info:", payload);
@@ -562,7 +561,7 @@ const StoreContextProvider = ({ children }) => {
     currentUser,
     authLoading,
     authError,
-    submitLoading, // ADDED THIS
+    submitLoading,
     login,
     signup,
     forgotPassword,

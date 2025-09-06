@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
   return (
     <div className="space-y-6">

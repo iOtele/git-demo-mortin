@@ -115,8 +115,8 @@ const MultiStepForm = () => {
     salary: "",
     role: "",
     companyEmail: "",
-    state: "",
-    lga: "",
+    state_id: "",
+    lga_id: "",
     companyName: "",
     companyAddress: "",
     employerName: "",
@@ -291,7 +291,7 @@ const MultiStepForm = () => {
       if (result.status === "success") {
         setSubmitSuccess(true);
         console.log("Form submitted successfully!");
-        setStep(5); // Move to success step
+        setStep(5);
       }
     } catch (error) {
       console.error("Form submission failed:", error);
@@ -308,7 +308,6 @@ const MultiStepForm = () => {
 
   return (
     <>
-    
       {submitLoading && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg">
