@@ -8,7 +8,7 @@ import { assets } from "../assets/assets";
 const Featured = () => {
   const { products, loadingProducts } = useContext(StoreContext);
 
-  // Filter for only featured products
+
   // const featuredProducts = products.filter(
   //   (item) => item.status === "Featured"
   // );

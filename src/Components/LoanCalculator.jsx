@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 const Calculator = () => {
   const [propertyPrice, setPropertyPrice] = useState("0"); // Default value for property price (N3,500,000)
-  const [downPaymentPercent, setDownPaymentPercent] = useState(20); // Default down payment
-  const [interestRate, setInterestRate] = useState(5); // Default interest rate
-  const [loanLength, setLoanLength] = useState(12); // Default loan length in months
+  const [downPaymentPercent, setDownPaymentPercent] = useState(20); 
+  const [interestRate, setInterestRate] = useState(5); 
+  const [loanLength, setLoanLength] = useState(12); // 
   const [monthlyPayment, setMonthlyPayment] = useState(0);
-  const [error, setError] = useState(""); // Error state for validation messages
+  const [error, setError] = useState(""); 
 
   const calculateMortgage = () => {
-    setError(""); // Clear previous errors
+    setError(""); 
     // setPropertyPrice("");
     // Validate inputs
     if (!propertyPrice || !interestRate || !loanLength || !downPaymentPercent) {
@@ -22,7 +22,7 @@ const Calculator = () => {
     const monthlyInterestRate = interestRate / 100 / 12;
     const totalPayments = loanLength;
 
-    // Check if loanAmount is valid
+   
     if (loanAmount <= 0) {
       setError("Loan amount must be greater than 0.");
 

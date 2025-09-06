@@ -5,7 +5,7 @@ const ForgotPasswordSuccess = () => {
   const navigate = useNavigate();
 
   const handleContinue = () => {
-    // Redirect to the change password/reset password page
+   
     navigate("/login");
   };
 

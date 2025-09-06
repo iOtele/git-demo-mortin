@@ -4,103 +4,59 @@ import loc_image_3 from "./loc-image-3.png";
 import image_1 from "./image-1.png";
 import image_2 from "./image-2.png";
 import image_3 from "./image-3.png";
-import Mike_1 from "./Mike1.png";
-import Mike_2 from "./Mike2.png";
-import Mike_3 from "./Mike3.png";
+import mike_1 from "./mike1.png";
+import mike_2 from "./mike2.png";
+import mike_3 from "./mike3.png";
 
-import next from "./next-Icon.png";
+import next from "./next-icon.png";
 import logo from "./logo.png";
 import menu_icon from "./menu-icon.png";
-import icon_1 from "./Camera.png";
-import icon_2 from "./Light.png";
-import icon_3 from "./Tower.png";
-import icon_4 from "./Path.png";
-import location from "./Location.png";
-import Address from "./Address.png";
-import Email from "./Email.png";
-import Customercare from "./Customercare.png";
-import Search from "./Search.png";
+import icon_1 from "./camera.png";
+import icon_2 from "./light.png";
+import icon_3 from "./tower.png";
+import icon_4 from "./path.png";
+import location from "./location.png";
+import Address from "./address.png";
+import Email from "./email.png";
+import Customercare from "./customercare.png";
+import Search from "./search.png";
 import BackIcon from "./backIcon.png";
-import Diploma from "./Diploma.png";
-import Building from "./Building.png";
-import Hospital from "./Hospital.png";
-import Select from "./Select.png";
-import Estate from "./Estate.png";
-import Discount from "./Discount.png";
-import Time from "./Time.png";
-import Dollar from "./Dollar.png";
-import Square from "./Square.png";
-import Dumbbell from "./Dumbbell.png";
-import Installment from "./Installment.png";
-import CheckMark from "./CheckMark.png";
+import Diploma from "./diploma.png";
+import Building from "./building.png";
+import Hospital from "./hospital.png";
+import Select from "./select.png";
+import Estate from "./estate.png";
+import Discount from "./discount.png";
+import Time from "./time.png";
+import Dollar from "./dollar.png";
+import Square from "./square.png";
+import Dumbbell from "./dumbbell.png";
+import Installment from "./installment.png";
+import CheckMark from "./checkmark.png";
 import icon_head from "./icon-head.png";
 import icon_house from "./icon-house.png";
 import icon_valid from "./icon-valid.png";
-import Heritage from "./Heritage.png";
-import Access from "./Access.png";
-import Sterling from "./Sterling.png";
-import Stanbic from "./Stanbic.png";
-import Union from "./Union.png";
+import Heritage from "./heritage.png";
+import Access from "./access.png";
+import Sterling from "./sterling.png";
+import Stanbic from "./stanbic.png";
+import Union from "./union.png";
 import profile from "./profile.png";
 import down_arrow from "./down-arrow.png";
-import User from "./User.png";
-import Logout from "./Logout.png";
-import Support from "./Support.png";
-import Apple from "./Apple.png";
-import Google from "./Google.png";
-import Facebook from "./Facebook.png";
-import info from "./Info.png";
-import Estimate from "./Estimate.png";
-import Mortgage from "./Mortgage.png";
+import User from "./user.png";
+import Logout from "./logout.png";
+import Support from "./support.png";
+import Apple from "./apple.png";
+import Google from "./google.png";
+import Facebook from "./facebook.png";
+import info from "./info.png";
+import Estimate from "./estimate.png";
+import Mortgage from "./mortgage.png";
 import Bagde_1 from "./badge-1.png";
 import Badge_2 from "./badge-2.png";
-import Up from "./Up.png";
+import Up from "./up.png";
 
 export const assets = {
-  // Up,
-  // icon_head,
-  // Badge_2,
-  // Bagde_1,
-  // down_arrow,
-  // User,
-  // Support,
-  // Logout,
-  // icon_house,
-  // icon_valid,
-  // Installment,
-  // CheckMark,
-  // Email,
-  // Select,
-  // Estate,
-  // Discount,
-  // Time,
-  // Dollar,
-  // Square,
-  // BackIcon,
-  // Search,
-  // Customercare,
-  // next,
-  // Address,
-  // location,
-  // menu_icon,
-  // logo,
-  // icon_1,
-  // icon_2,
-  // icon_3,
-  // icon_4,
-  // Diploma,
-  // Building,
-  // Hospital,
-  // Dumbbell,
-  // Mike_1,
-  // profile,
-  // Apple,
-  // Facebook,
-  // Google,
-  // info,
-  // Estimate,
-  // Mortgage,
-
   Address,
   Apple,
   BackIcon,
@@ -121,7 +77,6 @@ export const assets = {
   Hospital,
   Installment,
   Logout,
-  Mike_1,
   Mortgage,
   Select,
   Search,
@@ -219,42 +174,6 @@ export const allproperty_list = [
     size: "3242 Sqm",
     icons: [icon_1, icon_2, icon_3, icon_4],
   },
-  // {
-  //   id: 7,
-  //   title: "Chicken Bungalow",
-  //   image: image_1,
-  //   price: "15,000,000",
-  //   location: "Songotedo, Lekki, Lagos",
-  //   category: "Bungalow",
-  //   featured: true,
-  //   discounted: false,
-  //   size: "3242 Sqm",
-  //   icons: [icon_1, icon_2, icon_3, icon_4],
-  // },
-  // {
-  //   id: 8,
-  //   title: "Veg Bungalow",
-  //   image: image_2,
-  //   price: "15,000,000",
-  //   location: "Igbo Efon, Lekki, Lagos",
-  //   category: "Bungalow",
-  //   featured: true,
-  //   discounted: false,
-  //   size: "3242 Sqm",
-  //   icons: [icon_1, icon_2, icon_3, icon_4],
-  // },
-  // {
-  //   id: 9,
-  //   title: "Ripple Ice Cream",
-  //   image: image_3,
-  //   price: "15,000,000",
-  //   location: "Songotedo, Lekki, Lagos",
-  //   category: "2-Story building",
-  //   featured: true,
-  //   discounted: false,
-  //   size: "3242 Sqm",
-  //   icons: [icon_1, icon_2, icon_3, icon_4],
-  // },
 ];
 
 export const State_list = [
@@ -351,18 +270,18 @@ export const team_list = [
     id: 1,
     name: "Mike Smith",
     position: " Founder/CEO",
-    image: Mike_1,
+    image: mike_1,
   },
   {
     id: 2,
     name: "Mike Smith",
     position: " Founder/CEO",
-    image: Mike_2,
+    image: mike_2,
   },
   {
     id: 3,
     name: "Mike Smith",
     position: " Founder/CEO",
-    image: Mike_3,
+    image: mike_3,
   },
 ];

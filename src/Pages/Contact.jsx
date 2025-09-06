@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Title from "../Components/Title";
-import Footer from "./Footer";
 import { assets } from "../assets/assets";
 
 const ContactForm = () => {

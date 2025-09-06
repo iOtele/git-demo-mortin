@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ApplicationSubmitted() {
   const handleContinue = () => {
-    // Handle continue action here
+
     console.log("Continue clicked");
   };
 

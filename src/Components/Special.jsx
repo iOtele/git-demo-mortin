@@ -4,7 +4,7 @@ import Title from "../Components/Title";
 import Items from "../Components/Items";
 
 const Special = () => {
-  // const { allproperty_list } = useContext(StoreContext);
+ 
   const { products, loadingProducts } = useContext(StoreContext);
 
   return (
