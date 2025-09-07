@@ -1,6 +1,6 @@
-import locImage1 from "./loc-image-1.png";
-import locImage2 from "./loc-image-2.png";
-import locImage3 from "./loc-image-3.png";
+import locImage1 from "./locImage1.png";
+import locImage2 from "./locImage2.png";
+import locImage3 from "./locImage3.png";
 
 import image1 from "./image1.png";
 import image2 from "./image2.png";
@@ -18,10 +18,10 @@ import nextIcon from "./nextIcon.png";
 import logo from "./logo.png";
 import menuIcon from "./menuIcon.png";
 
-import iconCamera from "./camera.png";
-import iconLight from "./light.png";
-import iconTower from "./tower.png";
-import iconPath from "./path.png";
+import iconCamera from "./cameraIcon.png";
+import iconLight from "./lightIcon.png";
+import iconTower from "./towerIcon.png";
+import iconPath from "./pathIcon.png";
 
 import locationIcon from "./location.png";
 import addressIcon from "./address.png";
