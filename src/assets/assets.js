@@ -23,48 +23,48 @@ import iconLight from "./lightIcon.png";
 import iconTower from "./towerIcon.png";
 import iconPath from "./pathIcon.png";
 
-import locationIcon from "./location.png";
-import addressIcon from "./address.png";
-import emailIcon from "./email.png";
+import locationIcon from "./locationIcon.png";
+import addressIcon from "./addressIcon.png";
+import emailIcon from "./emailIcon.png";
 import customerCare from "./customerCare.png";
-import searchIcon from "./search.png";
+import searchIcon from "./searchIcon.png";
 import backIcon from "./backIcon.png";
 
-import diploma from "./diploma.png";
-import building from "./building.png";
-import hospital from "./hospital.png";
-import selectIcon from "./select.png";
-import estateIcon from "./estate.png";
-import discountIcon from "./discount.png";
-import timeIcon from "./time.png";
-import dollarIcon from "./dollar.png";
-import squareIcon from "./square.png";
-import dumbbellIcon from "./dumbbell.png";
-import installmentIcon from "./installment.png";
+import diploma from "./diplomaIcon.png";
+import building from "./buildingIcon.png";
+import hospital from "./hospitalIcon.png";
+import selectIcon from "./selectIcon.png";
+import estateIcon from "./estateIcon.png";
+import discountIcon from "./discountIcon.png";
+import timeIcon from "./timeIcon.png";
+import dollarIcon from "./dollarIcon.png";
+import squareIcon from "./squareIcon.png";
+import dumbbellIcon from "./dumbbellIcon.png";
+import installmentIcon from "./installmentIcon.png";
 import checkMark from "./checkMark.png";
 
 import iconHead from "./iconHead.png";
 import iconHouse from "./iconHouse.png";
 import iconValid from "./iconValid.png";
 
-import heritage from "./heritage.png";
-import access from "./access.png";
-import sterling from "./sterling.png";
-import stanbic from "./stanbic.png";
-import union from "./union.png";
+import heritage from "./heritageIcon.png";
+import access from "./accessIcon.png";
+import sterling from "./sterlingIcon.png";
+import stanbic from "./stanbicIcon.png";
+import union from "./unionIcon.png";
 
-import profile from "./profile.png";
+import profile from "./profileIcon.png";
 import downArrow from "./downArrow.png";
-import userIcon from "./user.png";
-import logoutIcon from "./logout.png";
-import supportIcon from "./support.png";
+import userIcon from "./userIcon.png";
+import logoutIcon from "./logoutIcon.png";
+import supportIcon from "./supportIcon.png";
 
-import appleIcon from "./apple.png";
-import googleIcon from "./google.png";
-import facebookIcon from "./facebook.png";
+import appleIcon from "./appleIcon.png";
+import googleIcon from "./googleIcon.png";
+import facebookIcon from "./facebookIcon.png";
 import infoIcon from "./infoIcon.png";
-import estimateIcon from "./estimate.png";
-import mortgageIcon from "./mortgage.png";
+import estimateIcon from "./estimateIcon.png";
+import mortgageIcon from "./mortgageIcon.png";
 
 import badge1 from "./badge1.png";
 import badge2 from "./badge2.png";
