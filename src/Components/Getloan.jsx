@@ -15,40 +15,46 @@ const GetLoan = () => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-8 mt-8">
-        <div className="flex flex-col items-center text-center w-72">
+        <div className="flex flex-col items-center text-center w-72 p-4">
           <img
             className="w-16 mb-2 sm:h-28"
-            src={assets.icon_head}
+            src={assets.iconHead}
             alt="Create Account"
           />
-          <h3 className="text-2xl font-medium ">Create a Mortln Account</h3>
-          <p className="text-gray-700 mt-2">
-            It is a long established fact that a reader will be distracted.
-          </p>
+          <div className="text-center h-auto md:h-auto ">
+            <h3 className="text-2xl font-medium ">Create a Mortln Account</h3>
+            <p className="text-gray-700 mt-2">
+              It is a long established fact that a reader will be distracted.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col items-center text-center w-72">
+        <div className="flex flex-col items-center text-center w-72 p-4">
           <img
             className="w-16 mb-2 sm:h-28"
-            src={assets.icon_valid}
+            src={assets.iconValid}
             alt="Verify Identity"
           />
-          <h3 className="text-2xl  font-medium">
-            Verify Identity & Employment Status
-          </h3>
-          <p className="text-gray-700 mt-2">
-            It is a long established fact that a reader will be distracted.
-          </p>
+          <div className="text-center h-auto md:h-auto ">
+            <h3 className="text-2xl  font-medium">
+              Verify Identity & Employment Status
+            </h3>
+            <p className="text-gray-700 mt-2">
+              It is a long established fact that a reader will be distracted.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col items-center text-center w-72">
+        <div className="flex flex-col items-center text-center w-72 p-4">
           <img
             className="w-16 mb-2 sm:h-28"
-            src={assets.icon_house}
+            src={assets.iconHouse}
             alt="Find Home"
           />
-          <h3 className="text-2xl font-medium px-8">Find Your Dream Home</h3>
-          <p className="text-gray-700 mt-2">
-            It is a long established fact that a reader will be distracted.
-          </p>
+          <div className="text-center h-auto md:h-auto ">
+            <h3 className="text-2xl font-medium px-8">Find Your Dream Home</h3>
+            <p className="text-gray-700 mt-2">
+              It is a long established fact that a reader will be distracted.
+            </p>
+          </div>
         </div>
       </div>
 

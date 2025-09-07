@@ -8,7 +8,6 @@ import { assets } from "../assets/assets";
 const Featured = () => {
   const { products, loadingProducts } = useContext(StoreContext);
 
-
   // const featuredProducts = products.filter(
   //   (item) => item.status === "Featured"
   // );
@@ -18,7 +17,7 @@ const Featured = () => {
       <div className="flex justify-between items-center w-full">
         <Title title="Featured" />
         <div className="flex justify-center items-center rounded-full border border-secondary-color cursor-pointer h-12 w-12 sm:h-14 sm:w-14  hover:bg-yellow-100">
-          <img src={assets.next} alt="Next" />
+          <img src={assets.nextIcon} alt="Next" />
         </div>
       </div>
       <div className="flex gap-4 text-center mt-4 items-center justify-center ">

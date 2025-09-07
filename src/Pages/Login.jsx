@@ -215,18 +215,22 @@ const AuthForm = () => {
 
       <div className="mt-6 border-t pt-4">
         <p className="text-lg text-gray-700 py-2">Or Connect with:</p>
-        <div className="space-y-2 ">
+        <div className="space-y-2">
           <button className="flex justify-center items-center w-full p-2 border rounded-md">
-            <img src={assets.Google} alt="Google" className=" w-5   " />
-            <p className="text-center w-full ">Continue with Google</p>{" "}
+            <img src={assets.googleIcon} alt="Google" className="w-5" />
+            <p className="text-center w-full">Continue with Google</p>
           </button>
           <button className="flex items-center justify-center w-full p-2 border rounded-md">
-            <img src={assets.Facebook} alt="Facebook" className="w-5 mr-2" />{" "}
-            <p className="text-center w-full ">Continue with Facebook</p>
+            <img
+              src={assets.facebookIcon}
+              alt="Facebook"
+              className="w-5 mr-2"
+            />
+            <p className="text-center w-full">Continue with Facebook</p>
           </button>
           <button className="flex items-center justify-center w-full p-2 border rounded-md">
-            <img src={assets.Apple} alt="Apple" className="w-5 mr-2" />
-            <p className="text-center w-full ">Continue with Apple</p>
+            <img src={assets.appleIcon} alt="Apple" className="w-5 mr-2" />
+            <p className="text-center w-full">Continue with Apple</p>
           </button>
         </div>
       </div>

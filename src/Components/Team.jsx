@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { StoreContext } from "../Context/StoreContext";
 
 const Team = () => {
-  const { team_list } = useContext(StoreContext);
+  const { teamList } = useContext(StoreContext);
   return (
     <div className="flex flex-col items-center text-center py-10 px-4">
       <h1 className="text-4xl font-semibold font-poppins">Our Team</h1>
@@ -12,7 +12,7 @@ const Team = () => {
         like
       </p>
       <div className="flex flex-wrap justify-center mt-10 gap-6">
-        {team_list.map((team, index) => (
+        {teamList.map((team, index) => (
           <div key={index} className="text-center  ">
             <img
               className="w-64   object-cover"

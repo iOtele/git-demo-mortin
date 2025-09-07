@@ -62,8 +62,6 @@ const LoanSummaryDashboard = () => {
                 </span>
               </div>
 
-              {/* Loan Statistics */}
-
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
                 <div>
                   <div className="text-2xl font-bold text-gray-900 mb-1">

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const Calculator = () => {
-  const [propertyPrice, setPropertyPrice] = useState("0"); // Default value for property price (N3,500,000)
+  const [propertyPrice, setPropertyPrice] = useState("0"); 
   const [downPaymentPercent, setDownPaymentPercent] = useState(20); 
   const [interestRate, setInterestRate] = useState(5); 
-  const [loanLength, setLoanLength] = useState(12); // 
+  const [loanLength, setLoanLength] = useState(12); 
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [error, setError] = useState(""); 
 

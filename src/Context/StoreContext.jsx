@@ -1,11 +1,11 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import {
-  sponsor_list,
-  house_list,
-  allproperty_list,
-  State_list,
-  team_list,
+  sponsorList,
+  houseList,
+  allPropertyList,
+  stateList,
+  teamList,
 } from "../assets/assets";
 export const StoreContext = createContext(null);
 const API_BASE_URL = "https://preprod.mortin.co/api/ui";
@@ -547,11 +547,11 @@ const StoreContextProvider = ({ children }) => {
 
   // Context value - FIXED: Added missing submitLoading
   const contextValue = {
-    sponsor_list,
-    house_list,
-    allproperty_list,
-    State_list,
-    team_list,
+    sponsorList,
+    houseList,
+    allPropertyList,
+    stateList,
+    teamList,
     products,
     loadingProducts,
     states,

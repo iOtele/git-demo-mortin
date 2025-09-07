@@ -25,7 +25,7 @@ const ContactForm = () => {
 
   const ContactDetail = ({ icon, title, details }) => (
     <div className="flex flex-col items-center text-center sm:border-r last:border-r-0 pr-6">
-      <img className="w-20 mb-2" src={icon} alt="" />
+      <img className="w-20 mb-2" src={icon} alt={title} />
       <span className="text-sm font-semibold">{title}</span>
       {details.map((detail, index) => (
         <p key={index} className="text-lg font-medium">
@@ -37,21 +37,21 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center bg-contain bg-center p-12 text-black bg-faded-secondary bg-[url(assets/contactbg.png)] min-h-[60vh]">
+      <div className="flex flex-col items-center bg-contain bg-center p-12 text-black bg-faded-secondary bg-[url('/bgContact.png')] min-h-[60vh]">
         <h1 className="text-4xl font-semibold mb-12">Contact us</h1>
         <div className="flex space-x-8 gap-y-10 flex-col sm:flex-row ">
           <ContactDetail
-            icon={assets.Address}
+            icon={assets.addressIcon}
             title="ADDRESS"
             details={["4 Mambolo Street, Wuse Zone 2,", "Abuja 900288"]}
           />
           <ContactDetail
-            icon={assets.Email}
+            icon={assets.emailIcon}
             title="EMAIL ADDRESS"
             details={["Info@Mortln.com", "Business@Mortln.com"]}
           />
           <ContactDetail
-            icon={assets.Customercare}
+            icon={assets.customerCare}
             title="CUSTOMER CARE"
             details={[
               "Front desk:+234-817-4300-051",

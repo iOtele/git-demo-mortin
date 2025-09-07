@@ -159,7 +159,7 @@ const Navbar = () => {
                   </span>
                   <img
                     className="h-2 mx-2"
-                    src={assets.down_arrow}
+                    src={assets.downArrow}
                     alt="Dropdown Arrow"
                   />
                   <img

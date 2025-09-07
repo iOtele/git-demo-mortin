@@ -23,7 +23,6 @@ const LoanApplicationModal = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg">
-        {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <h1 className="text-xl font-bold text-gray-900">Loan Application</h1>
           <button

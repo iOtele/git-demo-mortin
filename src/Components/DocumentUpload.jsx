@@ -15,7 +15,7 @@ const DocumentUpload = ({
         <div className="border border-gray-200 rounded-lg p-5 bg-yellow-50">
           <div className="flex justify-between items-center">
             <div className="rounded-full w-10 h-10 bg-gray-200 flex items-center justify-center">
-              <img className="w-8" src={assets.Up} alt="" />
+              <img className="w-8" src={assets.upIcon} alt="" />
             </div>
 
             <div>
@@ -65,7 +65,7 @@ const DocumentUpload = ({
         <div className="border border-gray-200 rounded-lg p-5 bg-yellow-50">
           <div className="flex justify-between items-center">
             <div className="rounded-full w-10 h-10 bg-gray-200 flex items-center justify-center">
-              <img className="w-8" src={assets.Up} alt="" />
+              <img className="w-8" src={assets.upIcon} alt="" />
             </div>
             <div>
               <h3 className="font-medium text-gray-800">Employment ID</h3>
@@ -112,7 +112,7 @@ const DocumentUpload = ({
         <div className="border border-gray-200 rounded-lg p-5 bg-yellow-50">
           <div className="flex justify-between items-center">
             <div className="rounded-full w-10 h-10 bg-gray-200 flex items-center justify-center">
-              <img className="w-8" src={assets.Up} alt="" />
+              <img className="w-8" src={assets.upIcon} alt="" />
             </div>
             <div>
               <h3 className="font-medium text-gray-800">Government ID</h3>
@@ -159,7 +159,7 @@ const DocumentUpload = ({
         <div className="border border-gray-200 rounded-lg p-5 bg-yellow-50">
           <div className="flex justify-between items-center">
             <div className="rounded-full w-10 h-10 bg-gray-200 flex items-center justify-center">
-              <img className="w-8" src={assets.Up} alt="" />
+              <img className="w-8" src={assets.upIcon} alt="" />
             </div>
             <div>
               <h3 className="font-medium text-gray-800">

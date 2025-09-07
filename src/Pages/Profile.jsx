@@ -29,7 +29,7 @@ const MyProfile = () => {
     <div className="flex flex-col ">
       <div className="bg-secondary-color sm:flex justify-center items-center p-4 w-full hidden ">
         <div className="flex items-center gap-8 max-w-5xl text-lg font-medium">
-          <img src={assets.info} alt="Info" className="w-10" />
+          <img src={assets.infoIcon} alt="Info" className="w-10" />
           <p>
             You are a few steps away from completely setting up your Mortin
             account

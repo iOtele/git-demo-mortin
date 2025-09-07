@@ -12,7 +12,7 @@ const ClientArea = () => {
     <>
       <div className="bg-secondary-color sm:flex justify-center items-center p-4 w-full hidden ">
         <div className="flex items-center gap-8 max-w-5xl text-lg font-medium">
-          <img src={assets.info} alt="Info" className="w-10" />
+          <img src={assets.infoIcon} alt="Info" className="w-10" />
           <p>
             You are a few steps away from completely setting up your Mortin
             account
@@ -24,7 +24,7 @@ const ClientArea = () => {
           </Link>
         </div>
       </div>
-      <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url('/bg-listing.png')]">
+      <div className="relative h-[50vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat bg-[url('/bgListing.png')]">
         <h1 className="text-4xl md:text-5xl text-white font-bold mb-6">
           Let’s help you find your new home
         </h1>
@@ -36,7 +36,7 @@ const ClientArea = () => {
           />
           <img
             className="absolute right-4 top-3 w-6 h-6 cursor-pointer"
-            src={assets.Search}
+            src={assets.searchIcon}
             alt="Search"
           />
         </div>

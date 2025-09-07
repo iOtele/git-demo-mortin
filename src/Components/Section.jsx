@@ -1,8 +1,5 @@
 import React from "react";
-import image_8 from "../assets/image-8.png";
-import image_9 from "../assets/image-9.png";
-import image_10 from "../assets/image-10.png";
-import image_11 from "../assets/image-11.png";
+
 import { assets } from "../assets/assets";
 
 const Section = () => {
@@ -10,7 +7,7 @@ const Section = () => {
     <div className="container grid sm:grid-cols-3 grid-cols-2 grid-rows-3 sm:grid-rows-2 gap-2 mx-auto  transition-all duration-200 px-[8%] md:px-[5%]  xl:px-[10%] py-4">
       <div className="relative rounded-lg overflow-hidden col-span-2">
         <img
-          src={image_8}
+          src={assets.image8}
           alt="Who are we?"
           className="w-full h-full object-cover"
         />
@@ -20,7 +17,7 @@ const Section = () => {
       </div>
       <div className="relative rounded-lg overflow-hidden">
         <img
-          src={image_9}
+          src={assets.image9}
           alt="Our Mission"
           className="w-full h-full object-cover"
         />
@@ -30,7 +27,7 @@ const Section = () => {
       </div>
       <div className="relative rounded-lg overflow-hidden">
         <img
-          src={image_10}
+          src={assets.image10}
           alt="Our Vision"
           className="w-full h-full object-cover"
         />
@@ -40,7 +37,7 @@ const Section = () => {
       </div>
       <div className="relative rounded-lg overflow-hidden">
         <img
-          src={image_11}
+          src={assets.image11}
           alt="Our Values"
           className="w-full h-full object-cover"
         />
@@ -56,7 +53,7 @@ const Section = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
         </p>
         <div className="mt-0">
-          <img className="w-6" src={assets.next} alt="Next" />
+          <img className="w-6" src={assets.nextIcon} alt="Next" />
         </div>
       </div>
     </div>

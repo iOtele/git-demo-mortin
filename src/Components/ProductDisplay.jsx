@@ -8,7 +8,7 @@ const ProductDisplay = ({ item }) => {
       <div className="flex justify-between items-center py-4">
         <Link to="/listing">
           <div className="flex items-center gap-2">
-            <img src={assets.BackIcon} alt="Back" className="w-5" />
+            <img src={assets.backIcon} alt="Back" className="w-5" />
             <span className="text-lg font-semibold">Back</span>
           </div>
         </Link>
@@ -34,8 +34,8 @@ const ProductDisplay = ({ item }) => {
         <h1 className="text-2xl font-bold">{item.name}</h1>
         <div className="flex items-center gap-4 py-2">
           <p className="text-gray-500 flex items-center gap-2">
-            <img src={assets.location} alt="Location" className="w-5" />
-            {item.location}
+            <img src={assets.locationIcon} alt="Location" className="w-5" />
+            {item.locationIcon}
           </p>
           <div className="flex gap-2">
             {item.status && (
@@ -54,15 +54,15 @@ const ProductDisplay = ({ item }) => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-yellow-100 p-4 rounded-lg">
         {[
-          { icon: assets.icon_2, label: "Electricity" },
-          { icon: assets.icon_1, label: "Security" },
-          { icon: assets.icon_3, label: "Running Water" },
-          { icon: assets.icon_4, label: "Close to Market" },
-          { icon: assets.Building, label: "Close to Schools" },
-          { icon: assets.Hospital, label: "Close to Hospital" },
-          { icon: assets.Dumbbell, label: "Gym" },
-          { icon: assets.Diploma, label: "Deed of Assignment" },
-          { icon: assets.Diploma, label: "Deed of Contract" },
+          { icon: assets.iconLight, label: "Electricity" },
+          { icon: assets.iconCamera, label: "Security" },
+          { icon: assets.iconTower, label: "Running Water" },
+          { icon: assets.iconPath, label: "Close to Market" },
+          { icon: assets.building, label: "Close to Schools" },
+          { icon: assets.hospital, label: "Close to Hospital" },
+          { icon: assets.dumbbellIcon, label: "Gym" },
+          { icon: assets.diploma, label: "Deed of Assignment" },
+          { icon: assets.diploma, label: "Deed of Contract" },
         ].map((item, index) => (
           <div
             key={index}
@@ -79,7 +79,7 @@ const ProductDisplay = ({ item }) => {
         <div className="border border-gray-400 rounded-lg p-4 mt-2">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex items-center gap-2">
-              <img src={assets.Dollar} alt="Price" className="w-6" />
+              <img src={assets.dollarIcon} alt="Price" className="w-6" />
               <p className="font-semibold">
                 Price:{" "}
                 <span className="text-gray-500">
@@ -88,33 +88,33 @@ const ProductDisplay = ({ item }) => {
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <img src={assets.Time} alt="Duration" className="w-6" />
+              <img src={assets.timeIcon} alt="Duration" className="w-6" />
               <p className="font-semibold">
                 Payment Duration:{" "}
                 <span className="text-gray-500">3 - 12 Months</span>
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <img src={assets.Discount} alt="Interest" className="w-6" />
+              <img src={assets.discountIcon} alt="Interest" className="w-6" />
               <p className="font-semibold">
                 Interest Rate: <span className="text-gray-500">12%</span>
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <img src={assets.Estate} alt="Type" className="w-6" />
+              <img src={assets.estateIcon} alt="Type" className="w-6" />
               <p className="font-semibold">
                 Property Type: <span className="text-gray-500">Terrace</span>
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <img src={assets.Square} alt="Size" className="w-6" />
+              <img src={assets.squareIcon} alt="Size" className="w-6" />
               <p className="font-semibold">
                 Property Size:{" "}
                 <span className="text-gray-500">{item.product_size}</span>
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <img src={assets.Select} alt="Land" className="w-6" />
+              <img src={assets.selectIcon} alt="Land" className="w-6" />
               <p className="font-semibold">
                 Land Area:{" "}
                 <span className="text-gray-500">{item.propert_size}</span>

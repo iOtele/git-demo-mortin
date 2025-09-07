@@ -16,14 +16,14 @@ const CreditLimitCard = () => {
             <h2 className="text-lg font-semibold text-gray-900">
               Credit Limit
             </h2>
-            <img src={assets.Bagde_1} className="text-gray-400 w-6 h-6" />
+            <img src={assets.badge1} className="text-gray-400 w-6 h-6" />
           </div>
           <div className="mt-8">
             <p className="text-green-600 text-3xl font-bold">₦ 5,000,000</p>
           </div>
           <div className="flex justify-between items-end">
             <div className=" flex items-center justify-center text-gray-500 text-sm">
-              <img src={assets.info} className="w-4 h-4 mr-2" />
+              <img src={assets.infoIcon} className="w-4 h-4 mr-2" />
               <span>Complete user verification to increase credit score</span>
             </div>
             <button className="bg-secondary-color hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-lg lg:max-w-56 text-sm md:text-xl">
@@ -36,7 +36,7 @@ const CreditLimitCard = () => {
           <div className="absolute top-0 right-0 w-full backdrop-blur-sm text-white h-full items-center justify-center rounded-br-lg px-2 py-1 gap-2 font-semibold flex flex-col">
             {" "}
             <img
-              src={assets.Badge_2}
+              src={assets.badge2}
               alt=""
               className="text-gray-400 w-7 h-7"
             />
@@ -55,7 +55,7 @@ const CreditLimitCard = () => {
           </div>
           <div className="flex justify-between items-end">
             <div className="mt-2 flex items-center text-gray-500 text-sm">
-              <img src={assets.info} className="w-4 h-4 mr-2" />
+              <img src={assets.infoIcon} className="w-4 h-4 mr-2" />
               <span>Complete user verification to increase credit score</span>
             </div>
             <button className="mt-4 bg-secondary-color hover:bg-yellow-500 text-black font-semibold py-2 px-5 rounded-lg lg:max-w-56 text-xl">
