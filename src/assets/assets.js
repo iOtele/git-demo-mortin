@@ -14,7 +14,7 @@ import teamImage1 from "./teamImage1.png";
 import teamImage2 from "./teamImage2.png";
 import teamImage3 from "./teamImage3.png";
 
-import nextIcon from "./next-icon.png";
+import nextIcon from "./nextIcon.png";
 import logo from "./logo.png";
 import menuIcon from "./menu-icon.png";
 
