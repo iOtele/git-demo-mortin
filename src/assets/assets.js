@@ -1,4 +1,3 @@
-// Image Imports
 import locImage1 from "./loc-image-1.png";
 import locImage2 from "./loc-image-2.png";
 import locImage3 from "./loc-image-3.png";
@@ -11,9 +10,9 @@ import image9 from "./image-9.png";
 import image10 from "./image-10.png";
 import image11 from "./image-11.png";
 
-import mike1 from "./mike1.png";
-import mike2 from "./mike2.png";
-import mike3 from "./mike3.png";
+import teamImage1 from "./teamImage1.png";
+import teamImage2 from "./teamImage2.png";
+import teamImage3 from "./teamImage3.png";
 
 import nextIcon from "./next-icon.png";
 import logo from "./logo.png";
@@ -71,7 +70,6 @@ import badge1 from "./badge-1.png";
 import badge2 from "./badge-2.png";
 import upIcon from "./up.png";
 
-// Assets Export
 export const assets = {
   addressIcon,
   appleIcon,
@@ -281,9 +279,9 @@ export const sponsorList = [
 
 // Team List
 export const teamList = [
-  { id: 1, name: "Mike Smith", position: "Founder/CEO", image: mike1 },
-  { id: 2, name: "Mike Smith", position: "Founder/CEO", image: mike2 },
-  { id: 3, name: "Mike Smith", position: "Founder/CEO", image: mike3 },
+  { id: 1, name: "Mike Smith", position: "Founder/CEO", image: teamImage1 },
+  { id: 2, name: "Mike Smith", position: "Founder/CEO", image: teamImage2 },
+  { id: 3, name: "Mike Smith", position: "Founder/CEO", image: teamImage3 },
 ];
 
 // import loc_image_1 from "./loc-image-1.png";
