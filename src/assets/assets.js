@@ -26,7 +26,7 @@ import iconPath from "./pathIcon.png";
 import locationIcon from "./locationIcon.png";
 import addressIcon from "./addressIcon.png";
 import emailIcon from "./emailIcon.png";
-import customerCare from "./customerCare.png";
+import customerCare from "./customerCareIcon.png";
 import searchIcon from "./searchIcon.png";
 import backIcon from "./backIcon.png";
 
