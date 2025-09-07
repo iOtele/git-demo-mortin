@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 const GetLoan = () => {
   return (
-    <div className="w-full  mb-20 flex flex-col items-center justify-center bg-cover bg-center text-black relative bg-[url('assets/getloanbg.png')]">
+    <div className="w-full  mb-20 flex flex-col items-center justify-center bg-cover bg-center text-black relative bg-[url('/bgLoan.png')]">
       <div className="text-center max-w-2xl sm:max-w-[1058px] px-4 pt-8   mt-20">
         <h1 className="text-2xl sm:text-4xl font-semibold text-gray-900 mb-4">
           Get a Home Loan in 3 Easy Steps

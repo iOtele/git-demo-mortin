@@ -2,13 +2,13 @@ import locImage1 from "./loc-image-1.png";
 import locImage2 from "./loc-image-2.png";
 import locImage3 from "./loc-image-3.png";
 
-import image1 from "./image-1.png";
-import image2 from "./image-2.png";
-import image3 from "./image-3.png";
-import image8 from "./image-8.png";
-import image9 from "./image-9.png";
-import image10 from "./image-10.png";
-import image11 from "./image-11.png";
+import image1 from "./image1.png";
+import image2 from "./image2.png";
+import image3 from "./image3.png";
+import image8 from "./image8.png";
+import image9 from "./image9.png";
+import image10 from "./image10.png";
+import image11 from "./image11.png";
 
 import teamImage1 from "./teamImage1.png";
 import teamImage2 from "./teamImage2.png";
@@ -16,7 +16,7 @@ import teamImage3 from "./teamImage3.png";
 
 import nextIcon from "./nextIcon.png";
 import logo from "./logo.png";
-import menuIcon from "./menu-icon.png";
+import menuIcon from "./menuIcon.png";
 
 import iconCamera from "./camera.png";
 import iconLight from "./light.png";
@@ -26,9 +26,9 @@ import iconPath from "./path.png";
 import locationIcon from "./location.png";
 import addressIcon from "./address.png";
 import emailIcon from "./email.png";
-import customerCare from "./customercare.png";
+import customerCare from "./customerCare.png";
 import searchIcon from "./search.png";
-import backIcon from "./backicon.png";
+import backIcon from "./backIcon.png";
 
 import diploma from "./diploma.png";
 import building from "./building.png";
@@ -41,11 +41,11 @@ import dollarIcon from "./dollar.png";
 import squareIcon from "./square.png";
 import dumbbellIcon from "./dumbbell.png";
 import installmentIcon from "./installment.png";
-import checkMark from "./checkmark.png";
+import checkMark from "./checkMark.png";
 
-import iconHead from "./icon-head.png";
-import iconHouse from "./icon-house.png";
-import iconValid from "./icon-valid.png";
+import iconHead from "./iconHead.png";
+import iconHouse from "./iconHouse.png";
+import iconValid from "./iconValid.png";
 
 import heritage from "./heritage.png";
 import access from "./access.png";
@@ -54,7 +54,7 @@ import stanbic from "./stanbic.png";
 import union from "./union.png";
 
 import profile from "./profile.png";
-import downArrow from "./down-arrow.png";
+import downArrow from "./downArrow.png";
 import userIcon from "./user.png";
 import logoutIcon from "./logout.png";
 import supportIcon from "./support.png";
@@ -62,13 +62,13 @@ import supportIcon from "./support.png";
 import appleIcon from "./apple.png";
 import googleIcon from "./google.png";
 import facebookIcon from "./facebook.png";
-import infoIcon from "./info.png";
+import infoIcon from "./infoIcon.png";
 import estimateIcon from "./estimate.png";
 import mortgageIcon from "./mortgage.png";
 
-import badge1 from "./badge-1.png";
-import badge2 from "./badge-2.png";
-import upIcon from "./up.png";
+import badge1 from "./badge1.png";
+import badge2 from "./badge2.png";
+import upIcon from "./upIcon.png";
 
 export const assets = {
   addressIcon,
