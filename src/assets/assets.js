@@ -40,8 +40,8 @@ import timeIcon from "./timeIcon.png";
 import dollarIcon from "./dollarIcon.png";
 import squareIcon from "./squareIcon.png";
 import dumbbellIcon from "./dumbbellIcon.png";
-import installmentIcon from "./installmentIcon.png";
-import checkMark from "./checkMark.png";
+import installmentIcon from "./iconInstallment.png";
+import checkMark from "./checkMarkIcon.png";
 
 import iconHead from "./iconHead.png";
 import iconHouse from "./iconHouse.png";
@@ -62,7 +62,7 @@ import supportIcon from "./supportIcon.png";
 import appleIcon from "./appleIcon.png";
 import googleIcon from "./googleIcon.png";
 import facebookIcon from "./facebookIcon.png";
-import infoIcon from "./infoIcon.png";
+import infoIcon from "./iconInfo.png";
 import estimateIcon from "./estimateIcon.png";
 import mortgageIcon from "./mortgageIcon.png";
 
