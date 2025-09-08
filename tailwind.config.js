@@ -9,10 +9,10 @@ export default {
         "black-color": "var(--black-color)",
         "faded-secondary": "var(--faded-secondary-color)",
       },
-      // fontFamily: {
-      //   Poppins: "var(--title-font-family)",
-      //   Inter: "var(--texts-font-family)",
-      // },
+      fontFamily: {
+        Poppins: "var(--title-font-family)",
+        Inter: "var(--texts-font-family)",
+      },
     },
   },
   plugins: [],
