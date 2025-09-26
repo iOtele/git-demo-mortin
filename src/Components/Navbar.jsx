@@ -164,7 +164,7 @@ const Navbar = () => {
                   />
                   <img
                     className="w-14 h-14 rounded-full"
-                    src={assets.profile}
+                    src={currentUser?.avatar || assets.profile}
                     alt="Profile"
                   />
                 </div>
@@ -227,7 +227,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       onClick={() => setMobileMenuOpen(false)}
-                      to="calculator"
+                      to="/calculator"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                     >
                       Loan Calculator
@@ -254,30 +254,35 @@ const Navbar = () => {
                   <>
                     {" "}
                     <Link
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/clientarea"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                     >
                       Listing
                     </Link>
                     <Link
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/myapplication"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                     >
                       My Application
                     </Link>
                     <Link
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/payment"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                     >
                       Payments
                     </Link>
                     <Link
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/verification"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                     >
                       Id Verification
                     </Link>
                     <Link
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/calculator"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-bold hover:text-gray-900 text-gray-50"
                     >

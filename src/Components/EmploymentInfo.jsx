@@ -137,11 +137,16 @@ const EmploymentInfo = ({
             }`}
           >
             <option value="">Select...</option>
-            <option value="Lagos">Lagos</option>
+            {STATES.map((state) => (
+              <option key={state.id} value={state.id}>
+                {state.name}
+              </option>
+            ))}
+            {/* <option value="Lagos">Lagos</option>
             <option value="Abuja">Abuja</option>
             <option value="Kano">Kano</option>
             <option value="Oyo">Oyo</option>
-            <option value="Rivers">Rivers</option>
+            <option value="Rivers">Rivers</option> */}
           </select>
           {errors.state && (
             <p className="mt-1 text-sm text-red-600">{errors.state}</p>

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
   return (
     <div className="space-y-6">
@@ -19,7 +18,7 @@ const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
                 ? "border-red-500"
                 : "border-gray-300 bg-[#F0F0F0]"
             }`}
-            placeholder="Raymond"
+            placeholder="First name"
           />
           {errors.firstName && (
             <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
@@ -73,6 +72,7 @@ const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
           <div className="flex items-center ">
             <input
               type="text"
+              value={"+234"}
               placeholder="+234"
               className={`max-w-14 px-1 py-2 border rounded-l-md border-gray-300 focus:ring-yellow-400 bg-[#F0F0F0] focus:border-yellow-400`}
             />
@@ -84,12 +84,12 @@ const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
               className={`w-full px-4 py-2 border rounded-r-md focus:ring-yellow-400 bg-[#F0F0F0] focus:border-yellow-400 ${
                 errors.phone ? "border-red-500" : "border-gray-300"
               }`}
-              placeholder="8023932334"
-            />  </div>
-            {errors.phone && (
-              <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
-            )}
-        
+              placeholder="phone number"
+            />{" "}
+          </div>
+          {errors.phone && (
+            <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+          )}
         </div>
       </div>
 
@@ -168,6 +168,7 @@ const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
             name="nin"
             value={formData.nin}
             onChange={handleChange}
+            maxLength={11}
             className={`w-full px-4 py-2 border bg-[#F0F0F0] rounded-md focus:ring-yellow-400 focus:border-yellow-400 ${
               errors.nin ? "border-red-500" : "border-gray-300"
             }`}
@@ -187,6 +188,7 @@ const PersonalInfo = ({ formData, errors, handleChange, nextStep }) => {
             name="bvn"
             value={formData.bvn}
             onChange={handleChange}
+            maxLength={11}
             className={`w-full px-4 py-2 border bg-[#F0F0F0] rounded-md focus:ring-yellow-400 focus:border-yellow-400 ${
               errors.bvn ? "border-red-500" : "border-gray-300"
             }`}

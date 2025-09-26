@@ -23,7 +23,7 @@ const CreditLimitCard = () => {
           </div>
           <div className="flex justify-between items-end">
             <div className=" flex items-center justify-center text-gray-500 text-sm">
-              <img src={assets.infoIcon} className="w-4 h-4 mr-2" />
+              <img src={assets.iconInfo} className="w-4 h-4 mr-2" />
               <span>Complete user verification to increase credit score</span>
             </div>
             <button className="bg-secondary-color hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-lg lg:max-w-56 text-sm md:text-xl">

@@ -27,7 +27,6 @@ const UpdatePasswordForm = ({ isOpen, onClose }) => {
       [name]: value,
     }));
 
-    // Validate password requirements for new password
     if (name === "newPassword") {
       setPasswordValidation({
         minLength: value.length >= 8,
@@ -162,7 +161,7 @@ const UpdatePasswordForm = ({ isOpen, onClose }) => {
             </div>
           </div>
 
-          {/* New Password */}
+   
           <div>
             <label className="block text-lg font-medium text-gray-900 mb-3">
               New Password
@@ -238,7 +237,7 @@ const UpdatePasswordForm = ({ isOpen, onClose }) => {
             </div>
           </div>
 
-          {/* Confirm Password */}
+  
           <div>
             <label className="block text-lg font-medium text-gray-900 mb-3">
               Confirm password

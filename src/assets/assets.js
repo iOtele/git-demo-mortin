@@ -62,7 +62,7 @@ import supportIcon from "./supportIcon.png";
 import appleIcon from "./appleIcon.png";
 import googleIcon from "./googleIcon.png";
 import facebookIcon from "./facebookIcon.png";
-import infoIcon from "./iconInfo.png";
+import iconInfo from "./iconInfo.png";
 import estimateIcon from "./estimateIcon.png";
 import mortgageIcon from "./mortgageIcon.png";
 
@@ -71,6 +71,7 @@ import badge2 from "./badge2.png";
 import upIcon from "./upIcon.png";
 
 export const assets = {
+  access,
   addressIcon,
   appleIcon,
   backIcon,
@@ -82,6 +83,7 @@ export const assets = {
   diploma,
   discountIcon,
   dollarIcon,
+  downArrow,
   dumbbellIcon,
   emailIcon,
   estateIcon,
@@ -89,21 +91,12 @@ export const assets = {
   facebookIcon,
   googleIcon,
   hospital,
+  heritage,
   installmentIcon,
   image8,
   image9,
   image10,
   image11,
-  logoutIcon,
-  mortgageIcon,
-  selectIcon,
-  searchIcon,
-  squareIcon,
-  supportIcon,
-  timeIcon,
-  upIcon,
-  userIcon,
-  downArrow,
   iconCamera,
   iconLight,
   iconTower,
@@ -111,16 +104,23 @@ export const assets = {
   iconHead,
   iconHouse,
   iconValid,
-  infoIcon,
+  iconInfo,
   locationIcon,
   logo,
+  logoutIcon,
+  mortgageIcon,
   menuIcon,
   nextIcon,
   profile,
-  heritage,
-  access,
   sterling,
   stanbic,
+  selectIcon,
+  searchIcon,
+  squareIcon,
+  supportIcon,
+  timeIcon,
+  upIcon,
+  userIcon,
   union,
 };
 
