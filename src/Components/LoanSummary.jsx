@@ -1,22 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { StoreContext } from "../Context/StoreContext";
 
 const LoanSummaryDashboard = () => {
   const [activeTab, setActiveTab] = useState("ongoing");
 
-  const paymentHistory = [
-    {
-      date: "Jul 29th 2024",
-      amount: "₦ 300,000",
-      newBalance: "₦ 2,076,000",
-      status: "Confirmed",
-    },
-    {
-      date: "Aug 25th 2024",
-      amount: "₦ 275,000",
-      newBalance: "₦ 1,801,000",
-      status: "Confirmed",
-    },
-  ];
+  const { paymentHistory } = useContext(StoreContext);
 
   return (
     <div className="mx-auto p-4 container py-4 flex flex-col transition-all duration-200 px-[8%] md:px-[10%] mt-20">

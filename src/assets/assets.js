@@ -283,3 +283,18 @@ export const teamList = [
   { id: 2, name: "Mike Smith", position: "Founder/CEO", image: teamImage2 },
   { id: 3, name: "Mike Smith", position: "Founder/CEO", image: teamImage3 },
 ];
+
+export const paymentHistory = [
+    {
+      date: "Jul 29th 2024",
+      amount: "₦ 300,000",
+      newBalance: "₦ 2,076,000",
+      status: "Confirmed",
+    },
+    {
+      date: "Aug 25th 2024",
+      amount: "₦ 275,000",
+      newBalance: "₦ 1,801,000",
+      status: "Confirmed",
+    },
+  ];

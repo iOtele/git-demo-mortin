@@ -6,6 +6,7 @@ import {
   allPropertyList,
   stateList,
   teamList,
+  paymentHistory
 } from "../assets/assets";
 export const StoreContext = createContext(null);
 const API_BASE_URL = "https://preprod.mortin.co/api/ui";
@@ -623,6 +624,7 @@ const StoreContextProvider = ({ children }) => {
     allPropertyList,
     stateList,
     teamList,
+    paymentHistory,
     products,
     loadingProducts,
     states,
